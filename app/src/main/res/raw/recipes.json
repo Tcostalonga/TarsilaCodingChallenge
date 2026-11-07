@@ -1,0 +1,697 @@
+[
+  {
+    "id": 1,
+    "title": "Banana Pancakes",
+    "description": "Fluffy pancakes made with ripe bananas and oat flour, perfect for a light breakfast.",
+    "numberOfServing": 2,
+    "ingredients": [
+      "2 ripe bananas",
+      "2 eggs",
+      "1 cup oat flour (certified gluten-free)",
+      "1/2 cup almond milk",
+      "1 tsp baking powder",
+      "1 tsp vanilla extract",
+      "1 tsp coconut oil"
+    ],
+    "cookingInstructions": "Mash the bananas in a bowl. Whisk in the eggs, almond milk and vanilla. Add the oat flour and baking powder and stir until just combined. Heat the coconut oil in a non-stick pan over medium heat. Pour 1/4 cup of batter per pancake and cook for 2 minutes per side, until golden. Serve warm.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Vegetable Soup",
+    "description": "A comforting soup packed with seasonal vegetables and fresh herbs.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "2 carrots, diced",
+      "2 celery stalks, diced",
+      "1 onion, chopped",
+      "2 potatoes, cubed",
+      "1 zucchini, diced",
+      "2 garlic cloves, minced",
+      "1.5 l low-sodium vegetable broth",
+      "1 tbsp olive oil",
+      "1 tsp dried thyme",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": "Heat the olive oil in a large pot and sauté the onion and garlic for 3 minutes. Add the carrots, celery and potatoes and cook for 5 minutes. Pour in the broth, add the thyme and bring to a boil. Lower the heat and simmer for 20 minutes. Add the zucchini and cook for 5 more minutes. Season with black pepper and serve.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Mushroom Risotto",
+    "description": "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
+    "numberOfServing": 3,
+    "ingredients": [
+      "1 cup arborio rice",
+      "250 g mushrooms, sliced",
+      "1 shallot, finely chopped",
+      "2 garlic cloves, minced",
+      "1/2 cup dry white wine",
+      "1 l hot vegetable broth",
+      "2 tbsp butter",
+      "1/2 cup grated parmesan",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside. In the same pan, sauté the shallot and garlic. Add the rice and toast for 2 minutes. Pour in the wine and stir until absorbed. Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes. Stir in the mushrooms, the remaining butter and the parmesan. Season and serve immediately.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Chickpea Salad",
+    "description": "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
+    "numberOfServing": 2,
+    "ingredients": [
+      "1 can chickpeas, drained and rinsed",
+      "1 cucumber, diced",
+      "1 cup cherry tomatoes, halved",
+      "1/4 red onion, thinly sliced",
+      "2 tbsp chopped parsley",
+      "2 tbsp olive oil",
+      "Juice of 1 lemon",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Combine the chickpeas, cucumber, tomatoes, red onion and parsley in a large bowl. Whisk the olive oil, lemon juice, salt and pepper in a small bowl. Pour the dressing over the salad and toss well. Let it rest for 10 minutes before serving.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Avocado Bowl",
+    "description": "A colorful bowl with avocado, leafy greens, seeds and a tahini dressing.",
+    "numberOfServing": 1,
+    "ingredients": [
+      "1 avocado, sliced",
+      "1 cup baby spinach",
+      "1/2 cucumber, sliced",
+      "1/4 cup shredded red cabbage",
+      "1 tbsp pumpkin seeds",
+      "1 tbsp tahini",
+      "1 tsp lemon juice",
+      "1 tbsp water"
+    ],
+    "cookingInstructions": "Arrange the spinach in a bowl. Top with the avocado, cucumber and red cabbage. Mix the tahini, lemon juice and water until smooth. Drizzle the dressing over the bowl and sprinkle with pumpkin seeds.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Homemade Whole Wheat Bread",
+    "description": "A soft and hearty loaf made with whole wheat flour and a touch of honey.",
+    "numberOfServing": 8,
+    "ingredients": [
+      "3 cups whole wheat flour",
+      "1 packet (7 g) dry yeast",
+      "1 1/4 cups warm water",
+      "2 tbsp honey",
+      "2 tbsp olive oil",
+      "1 tsp salt"
+    ],
+    "cookingInstructions": "Dissolve the yeast and honey in the warm water and let it rest for 10 minutes. Add the flour, olive oil and salt and knead for 10 minutes until smooth. Cover and let it rise for 1 hour. Shape the dough into a loaf, place it in a greased pan and let it rise for 30 more minutes. Bake at 190°C for 35 minutes. Let it cool before slicing.",
+    "dietaryAttributes": [
+      {
+        "id": 6,
+        "name": "Whole grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Spinach Omelette",
+    "description": "A quick and nutritious omelette filled with fresh spinach and herbs.",
+    "numberOfServing": 1,
+    "ingredients": [
+      "3 eggs",
+      "1 cup fresh spinach",
+      "1 tbsp chopped chives",
+      "1 tsp olive oil",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Whisk the eggs with salt, pepper and chives. Heat the olive oil in a non-stick pan and wilt the spinach for 1 minute. Pour the eggs over the spinach and cook over medium-low heat for 3 minutes. Fold the omelette in half and cook for 1 more minute. Serve hot.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Lentil Curry",
+    "description": "A warming curry with red lentils, coconut milk and aromatic spices.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "1 cup red lentils, rinsed",
+      "1 can (400 ml) coconut milk",
+      "1 can diced tomatoes",
+      "1 onion, chopped",
+      "3 garlic cloves, minced",
+      "1 tbsp grated ginger",
+      "2 tbsp curry powder",
+      "1 tsp turmeric",
+      "2 cups water",
+      "1 tbsp coconut oil",
+      "Fresh cilantro to serve"
+    ],
+    "cookingInstructions": "Heat the coconut oil and sauté the onion, garlic and ginger for 5 minutes. Add the curry powder and turmeric and cook for 1 minute. Stir in the lentils, tomatoes, coconut milk and water. Simmer for 20 to 25 minutes, stirring often, until the lentils are soft. Garnish with cilantro and serve with rice.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Strawberry Smoothie",
+    "description": "A refreshing smoothie with strawberries, banana and almond milk.",
+    "numberOfServing": 2,
+    "ingredients": [
+      "2 cups frozen strawberries",
+      "1 banana",
+      "1 cup unsweetened almond milk",
+      "1 tbsp chia seeds",
+      "4 ice cubes"
+    ],
+    "cookingInstructions": "Add all the ingredients to a blender. Blend on high speed for 1 minute until smooth. Pour into glasses and serve immediately.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Whole Wheat Spaghetti Marinara",
+    "description": "Whole wheat pasta tossed in a simple homemade tomato and basil sauce.",
+    "numberOfServing": 3,
+    "ingredients": [
+      "250 g whole wheat spaghetti",
+      "1 can (400 g) crushed tomatoes",
+      "3 garlic cloves, minced",
+      "2 tbsp olive oil",
+      "1 tsp dried oregano",
+      "Fresh basil leaves",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Cook the spaghetti in salted boiling water according to the package instructions. Meanwhile, heat the olive oil and sauté the garlic for 1 minute. Add the tomatoes and oregano and simmer for 15 minutes. Season with salt and pepper. Drain the pasta and toss it with the sauce. Top with fresh basil.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Black Bean Tacos",
+    "description": "Corn tortillas filled with spiced black beans, fresh salsa and avocado.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "8 corn tortillas",
+      "2 cans black beans, drained",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "2 tomatoes, diced",
+      "1/2 red onion, diced",
+      "1 avocado, sliced",
+      "Juice of 1 lime",
+      "Fresh cilantro"
+    ],
+    "cookingInstructions": "Warm the black beans in a pan with the cumin and paprika for 5 minutes, mashing them lightly. Mix the tomatoes, onion, cilantro and lime juice to make the salsa. Heat the tortillas in a dry pan. Fill each tortilla with beans, salsa and avocado slices. Serve right away.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Grilled Salmon",
+    "description": "Tender salmon fillets with a lemon and herb marinade, served with asparagus.",
+    "numberOfServing": 2,
+    "ingredients": [
+      "2 salmon fillets",
+      "1 bunch asparagus",
+      "2 tbsp olive oil",
+      "Juice of 1 lemon",
+      "2 garlic cloves, minced",
+      "1 tsp dried dill",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Mix the olive oil, lemon juice, garlic, dill, salt and pepper. Coat the salmon with the marinade and let it rest for 15 minutes. Preheat a grill pan over medium-high heat. Grill the salmon for 4 minutes per side. Grill the asparagus for 5 minutes, turning occasionally. Serve together.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Blueberry Muffins",
+    "description": "Moist whole wheat muffins bursting with fresh blueberries.",
+    "numberOfServing": 12,
+    "ingredients": [
+      "2 cups whole wheat flour",
+      "1 cup fresh blueberries",
+      "2 eggs",
+      "1/2 cup honey",
+      "1/2 cup plain yogurt",
+      "1/3 cup vegetable oil",
+      "2 tsp baking powder",
+      "1 tsp vanilla extract"
+    ],
+    "cookingInstructions": "Preheat the oven to 180°C and line a muffin tin. Mix the flour and baking powder in a bowl. In another bowl, whisk the eggs, honey, yogurt, oil and vanilla. Combine the wet and dry ingredients without overmixing. Fold in the blueberries. Fill the muffin cups and bake for 20 to 22 minutes.",
+    "dietaryAttributes": [
+      {
+        "id": 6,
+        "name": "Whole grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Brown Rice with Broccoli",
+    "description": "A simple and wholesome side dish with brown rice, broccoli and garlic.",
+    "numberOfServing": 3,
+    "ingredients": [
+      "1 cup brown rice",
+      "2 cups broccoli florets",
+      "2 garlic cloves, minced",
+      "1 tbsp olive oil",
+      "2 cups water",
+      "1 tsp lemon zest"
+    ],
+    "cookingInstructions": "Rinse the rice and cook it in the water over low heat, covered, for 40 minutes. Steam the broccoli for 5 minutes. Heat the olive oil and sauté the garlic for 1 minute. Add the cooked rice and broccoli to the pan and toss well. Finish with lemon zest.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Lemon Chicken",
+    "description": "Juicy chicken breasts cooked with lemon, garlic and fresh herbs.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "4 chicken breasts",
+      "Juice and zest of 2 lemons",
+      "3 garlic cloves, minced",
+      "2 tbsp olive oil",
+      "1 tsp dried rosemary",
+      "1 tsp dried thyme",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": "Season the chicken with salt, pepper, rosemary and thyme. Heat the olive oil in a pan and cook the chicken for 6 minutes per side. Add the garlic, lemon juice and zest and cook for 2 more minutes, spooning the sauce over the chicken. Let it rest for 5 minutes before slicing.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Apple Pie",
+    "description": "A classic apple pie with a flaky crust and cinnamon-spiced filling.",
+    "numberOfServing": 8,
+    "ingredients": [
+      "2 1/2 cups all-purpose flour",
+      "1 cup cold vegan butter",
+      "6 tbsp cold water",
+      "6 apples, peeled and sliced",
+      "1/2 cup sugar",
+      "1 tbsp lemon juice",
+      "2 tsp cinnamon",
+      "2 tbsp cornstarch"
+    ],
+    "cookingInstructions": "Mix the flour with the vegan butter until crumbly, then add the water and form a dough. Chill for 30 minutes. Toss the apples with the sugar, lemon juice, cinnamon and cornstarch. Roll out half of the dough into a pie dish and add the filling. Cover with the remaining dough and cut a few slits on top. Bake at 200°C for 45 minutes, until golden.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Oatmeal Porridge",
+    "description": "A creamy bowl of oats topped with fruit and a drizzle of maple syrup.",
+    "numberOfServing": 1,
+    "ingredients": [
+      "1/2 cup rolled oats",
+      "1 cup oat milk",
+      "1/2 banana, sliced",
+      "1 tbsp maple syrup",
+      "1 tbsp chopped walnuts",
+      "1 pinch cinnamon"
+    ],
+    "cookingInstructions": "Bring the oat milk to a simmer in a small pot. Add the oats and cook for 5 minutes, stirring often, until creamy. Pour into a bowl and top with banana, walnuts, cinnamon and maple syrup.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Roasted Pumpkin",
+    "description": "Caramelized pumpkin wedges roasted with olive oil and warm spices.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "1 small pumpkin, cut into wedges",
+      "2 tbsp olive oil",
+      "1 tsp smoked paprika",
+      "1/2 tsp cinnamon",
+      "Fresh thyme",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": "Preheat the oven to 200°C. Toss the pumpkin wedges with the olive oil, paprika, cinnamon and pepper. Spread them on a baking sheet in a single layer. Roast for 30 to 35 minutes, turning halfway through. Sprinkle with fresh thyme and serve.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Corn Tortilla Wraps",
+    "description": "Corn tortillas filled with grilled chicken, peppers and fresh greens.",
+    "numberOfServing": 2,
+    "ingredients": [
+      "4 corn tortillas",
+      "1 chicken breast, sliced into strips",
+      "1 bell pepper, sliced",
+      "1/2 onion, sliced",
+      "1 cup lettuce, shredded",
+      "1 tsp chili powder",
+      "1 tbsp olive oil",
+      "Juice of 1 lime"
+    ],
+    "cookingInstructions": "Season the chicken with chili powder and lime juice. Heat the olive oil and cook the chicken for 6 to 8 minutes. Add the pepper and onion and cook for 4 more minutes. Warm the tortillas in a dry pan. Fill them with lettuce and the chicken mixture, then roll them up.",
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Mango Sorbet",
+    "description": "A naturally sweet and refreshing frozen dessert made with ripe mangoes.",
+    "numberOfServing": 4,
+    "ingredients": [
+      "3 ripe mangoes, peeled and cubed",
+      "Juice of 1 lime",
+      "2 tbsp agave syrup",
+      "1/4 cup water"
+    ],
+    "cookingInstructions": "Spread the mango cubes on a tray and freeze for at least 4 hours. Add the frozen mango, lime juice, agave syrup and water to a food processor. Blend until smooth and creamy. Serve immediately or freeze for 1 more hour for a firmer texture.",
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegan",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  }
+]

@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.data
+package tarsila.codingchallenge.domain
 
 data class Recipe(
     val id: Long,
