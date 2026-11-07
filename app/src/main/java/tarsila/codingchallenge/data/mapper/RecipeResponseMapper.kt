@@ -13,7 +13,7 @@ fun RecipeResponse.toRecipe() = Recipe(
     description = description,
     numberOfServings = numberOfServings,
     ingredients = ingredients,
-    cookingInstructions = cookingInstructions,
+    cookingInstructions = cookingInstructions.toCookingInstructionsList(),
     dietaryAttributes = dietaryAttributes.toDietaryAttributeList()
 )
 
@@ -25,3 +25,5 @@ fun DietaryAttributeResponse.toDietaryAttribute() = DietaryAttribute(
 )
 
 fun List<DietaryAttributeResponse>.toDietaryAttributeList() = map { it.toDietaryAttribute() }
+
+fun List<String>.toCookingInstructionsList() = map { it }

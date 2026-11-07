@@ -6,8 +6,9 @@ data class Recipe(
     val description: String,
     val numberOfServings: Int,
     val ingredients: List<String>,
-    val cookingInstructions: String,
-    val dietaryAttributes: List<DietaryAttribute>
+    val cookingInstructions: List<String>,
+    val dietaryAttributes: List<DietaryAttribute>,
+    val showRecipeDetail: Boolean = false
 )
 
 data class DietaryAttribute(

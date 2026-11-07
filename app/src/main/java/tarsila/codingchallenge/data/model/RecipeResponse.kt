@@ -7,9 +7,9 @@ data class RecipeResponse(
     val id: Long,
     val title: String,
     val description: String,
-    val numberOfServings: Int = 0,
+    val numberOfServings: Int,
     val ingredients: List<String>,
-    val cookingInstructions: String,
+    val cookingInstructions: List<String>,
     val dietaryAttributes: List<DietaryAttributeResponse>
 )
 
