@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Tarsila Coding Challenge</string>
+    <string name="explore_recipes">Explore Recipes</string>
+    <string name="filter_recipes_label">Filter list of recipes</string>
+    <string name="search_recipes_label">Search recipes</string>
 </resources>
