@@ -2,9 +2,16 @@
 
 package tarsila.codingchallenge.ui.compose
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FilterAlt
 import androidx.compose.material.icons.filled.Search
@@ -14,9 +21,15 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -27,11 +40,16 @@ import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.ui.RecipeIntent
 import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.RecipeViewModel
+import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
 
 @Composable
 fun RecipeScreen(viewModel: RecipeViewModel) {
 
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    LaunchedEffect(Unit) {
+        viewModel.onIntent(RecipeIntent.OnTryToFetchRecipes)
+    }
 
     RecipeScreen(
         uiState = uiState,
@@ -43,6 +61,19 @@ fun RecipeScreen(
     uiState: RecipeUiState,
     onIntent: (RecipeIntent) -> Unit,
 ) {
+    val searchText = rememberTextFieldState()
+
+    var showFilterBottomSheet by rememberSaveable { mutableStateOf(false) }
+
+    if (showFilterBottomSheet) {
+        RecipeFilterBottomSheet(
+            onDismissRequest = {
+                showFilterBottomSheet = false
+            },
+            onFilterRecipes = {}
+        )
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -51,35 +82,74 @@ fun RecipeScreen(
                         text = stringResource(R.string.explore_recipes),
                         style = MaterialTheme.typography.headlineMedium
                     )
-                }, actions = {
-                    IconButton(onClick = {}, content = {
+                },
+                actions = {
+                    IconButton(onClick = {
+                        showFilterBottomSheet = true
+                    }, content = {
                         Icon(
                             Icons.Default.FilterAlt,
                             contentDescription = stringResource(R.string.filter_recipes_label)
                         )
                     })
 
-                    IconButton(onClick = {}, content = {
+                    IconButton(onClick = {
+                        onIntent(RecipeIntent.ShowSearchField)
+                    }, content = {
                         Icon(
                             Icons.Default.Search,
                             contentDescription = stringResource(R.string.search_recipes_label)
                         )
                     })
                 }
-
-
             )
         }
     ) { paddingValues ->
         LazyColumn(
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             contentPadding = paddingValues,
         ) {
-            items(uiState.recipes, key = { it.id }) { item ->
-                if (item.showRecipeDetail) {
-                    RecipeDetail(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
-                } else {
-                    RecipeItem(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
+            item {
+                AnimatedVisibility(uiState.showSearchField) {
+                    TextField(
+                        state = searchText,
+                        label = { Text(text = stringResource(R.string.search_recipes_hint)) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp)
+                    )
+                }
+            }
+            when {
+                uiState.isLoading -> {
+                    item {
+                        Box(modifier = Modifier.fillParentMaxSize()) {
+                            RecipesLoadingState()
+                        }
+                    }
+                }
+
+                uiState.isError -> {
+                    item {
+                        Box(modifier = Modifier.fillParentMaxSize()) {
+                            RecipesErrorState(
+                                onRetry = { onIntent(RecipeIntent.OnTryToFetchRecipes) }
+                            )
+                        }
+                    }
+                }
+
+                uiState.isSuccess -> {
+                    items(uiState.recipes, key = { it.id }) { item ->
+                        AnimatedContent(item.showRecipeDetail) { showRecipeDetailState ->
+                            if (showRecipeDetailState) {
+                                RecipeDetail(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
+                            } else {
+                                RecipeItem(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -91,6 +161,9 @@ fun RecipeScreen(
 private fun RecipeScreenPreview() {
     RecipeScreen(
         uiState = RecipeUiState(
+            isSuccess = true,
+            isLoading = false,
+            isError = false,
             recipes = listOf(
                 Recipe(
                     id = 1,
@@ -122,12 +195,36 @@ private fun RecipeScreenPreview() {
                             id = 9383, name = "Gluten-free", contentColor = 4294831848, backgroundColor = 4287249178
                         )
                     )
+                ),
+                Recipe(
+                    id = 5,
+                    title = "Chickpea Salad",
+                    description = "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
+                    numberOfServings = 2,
+                    ingredients = listOf(
+                        "1 can chickpeas, drained and rinsed",
+                        "1 cucumber, diced",
+                        "1 cup cherry tomatoes, halved",
+                        "1/4 red onion, thinly sliced",
+                        "2 tbsp chopped parsley",
+                        "2 tbsp olive oil",
+                        "Juice of 1 lemon",
+                        "Salt and pepper to taste"
+                    ),
+                    cookingInstructions = listOf(
+                        "Combine the chickpeas, cucumber, tomatoes, red onion and parsley in a large bowl.",
+                        "Whisk the olive oil, lemon juice, salt and pepper in a small bowl.",
+                        "Pour the dressing over the salad and toss well.",
+                        "Let it rest for 10 minutes before serving."
+                    ),
+                    dietaryAttributes =
+                        listOf(
+                            DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
+                            DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
+                        ),
                 )
-            ),
-            isSuccess = true,
+            )
         ),
         onIntent = {}
     )
 }
-
-

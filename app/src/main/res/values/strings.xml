@@ -3,7 +3,23 @@
     <string name="explore_recipes">Explore Recipes</string>
     <string name="filter_recipes_label">Filter list of recipes</string>
     <string name="search_recipes_label">Search recipes</string>
+    <string name="search_recipes_hint">Search recipes by name</string>
     <string name="ingredients">Ingredients</string>
     <string name="cooking_instructions">Cooking Instructions</string>
+    <string name="error_feedback_title">Couldn\'t load recipes</string>
+    <string name="error_feedback_description">Something went wrong while getting the recipe list. Give it another try.</string>
+    <string name="error_feedback_button_label">Try again</string>
+    <string name="loading_state_title">Cooking up some recipes…</string>
+    <string name="loading_state_description">This will only take a moment.</string>
+    <string name="filters_label">Filters</string>
+    <string name="filter_servings_label">Servings</string>
+    <string name="filter_recipes_text_button">Filter recipes</string>
+    <string name="filter_dietary_preferences">Dietary preferences</string>
+    <string name="filter_servings_invalid_rule">Min can\'t be greater than max</string>
+    <string name="filter_servings_valid_rule">Leave empty for any amount</string>
+    <string name="any">Any</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="to">to</string>
 
 </resources>
