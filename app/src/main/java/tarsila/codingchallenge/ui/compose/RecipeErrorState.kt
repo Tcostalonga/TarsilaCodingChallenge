@@ -76,7 +76,7 @@ fun RecipesErrorState(
                 modifier = Modifier.size(18.dp)
             )
             Spacer(Modifier.size(8.dp))
-            Text(stringResource(R.string.error_feedback_button_label))
+            Text(stringResource(R.string.error_feedback_action_button))
         }
     }
 }

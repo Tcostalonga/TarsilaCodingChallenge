@@ -147,6 +147,17 @@ private fun RecipeScreen(
                 }
 
                 uiState.isSuccess -> {
+                    if (uiState.recipes.isEmpty()) {
+                        item {
+                            Box(modifier = Modifier.fillParentMaxSize()) {
+                                RecipesEmptyState(
+                                    onClearFilters = {
+                                        onIntent(RecipeIntent.OnTryToFetchRecipes)
+                                    })
+                            }
+                        }
+                    }
+
                     items(uiState.recipes, key = { it.id }) { item ->
                         AnimatedContent(item.showRecipeDetail) { showRecipeDetailState ->
                             if (showRecipeDetailState) {

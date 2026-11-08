@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Coloque em app/src/main/res/drawable/ill_recipes_empty.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#F4EEE8"
+        android:pathData="M20,108 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0" />
+    <path
+        android:fillColor="#E6DCD2"
+        android:pathData="M48,168 a52,6 0 1,0 104,0 a52,6 0 1,0 -104,0" />
+    <path
+        android:fillColor="#C96F4A"
+        android:pathData="M38,108 h14 v12 h-14 a6,6 0 0,1 0,-12 z" />
+    <path
+        android:fillColor="#C96F4A"
+        android:pathData="M162,108 h-14 v12 h14 a6,6 0 0,0 0,-12 z" />
+    <path
+        android:fillColor="#E08A62"
+        android:pathData="M50,100 H150 V140 Q150,164 126,164 H74 Q50,164 50,140 Z" />
+    <path
+        android:fillColor="#C96F4A"
+        android:pathData="M50,100 H150 V110 H50 Z" />
+    <path
+        android:fillColor="#B35E3C"
+        android:pathData="M46,100 a54,9 0 1,0 108,0 a54,9 0 1,0 -108,0" />
+    <path
+        android:fillColor="#5C2E1A"
+        android:pathData="M54,100 a46,6 0 1,0 92,0 a46,6 0 1,0 -92,0" />
+    <path
+        android:fillColor="#5C2E1A"
+        android:pathData="M80,128 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:fillColor="#5C2E1A"
+        android:pathData="M112,128 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:strokeColor="#5C2E1A"
+        android:strokeWidth="3"
+        android:pathData="M96,145 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:strokeColor="#8A7B70"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:pathData="M140,72 L158,90" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.85"
+        android:strokeColor="#8A7B70"
+        android:strokeWidth="5"
+        android:pathData="M106,56 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0" />
+    <path
+        android:strokeColor="#C96F4A"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M120,51 q0,-7 6,-7 q6,0 6,6 q0,5 -6,7 v3" />
+    <path
+        android:fillColor="#C96F4A"
+        android:pathData="M123.8,67 a2.2,2.2 0 1,0 4.4,0 a2.2,2.2 0 1,0 -4.4,0" />
+</vector>

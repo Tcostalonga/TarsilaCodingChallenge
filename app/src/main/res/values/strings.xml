@@ -8,7 +8,7 @@
     <string name="cooking_instructions">Cooking Instructions</string>
     <string name="error_feedback_title">Couldn\'t load recipes</string>
     <string name="error_feedback_description">Something went wrong while getting the recipe list. Give it another try.</string>
-    <string name="error_feedback_button_label">Try again</string>
+    <string name="error_feedback_action_button">Try again</string>
     <string name="loading_state_title">Cooking up some recipes…</string>
     <string name="loading_state_description">This will only take a moment.</string>
     <string name="filters_label">Filters</string>
@@ -18,8 +18,8 @@
     <string name="filter_servings_invalid_rule">Min can\'t be greater than max</string>
     <string name="filter_servings_valid_rule">Leave empty for any amount</string>
     <string name="any">Any</string>
-    <string name="min">Min</string>
-    <string name="max">Max</string>
-    <string name="to">to</string>
+    <string name="filter_empty_state_title">Nothing cooking here yet</string>
+    <string name="filter_empty_state_description">We couldn\'t find any recipes to show. Try adjusting your search or come back later.</string>
+    <string name="filter_empty_state_action_button">Refresh</string>
 
 </resources>
