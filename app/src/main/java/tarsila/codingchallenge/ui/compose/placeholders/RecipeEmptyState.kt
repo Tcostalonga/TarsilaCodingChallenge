@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.ui.compose
+package tarsila.codingchallenge.ui.compose.placeholders
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -16,7 +16,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -24,8 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.R
-
-private val Terracotta = Color(0xFFC96F4A)
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun RecipesEmptyState(
@@ -67,8 +65,8 @@ fun RecipesEmptyState(
 
         OutlinedButton(
             onClick = onClearFilters,
-            border = BorderStroke(1.dp, Terracotta),
-            colors = ButtonDefaults.outlinedButtonColors(contentColor = Terracotta)
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)
         ) {
             Text(stringResource(R.string.filter_empty_state_action_button))
         }
@@ -78,5 +76,7 @@ fun RecipesEmptyState(
 @Preview(showBackground = true, heightDp = 640)
 @Composable
 private fun RecipesEmptyStatePreview() {
-    MaterialTheme { RecipesEmptyState(onClearFilters = {}) }
+    TarsilaCodingChallengeTheme {
+        RecipesEmptyState(onClearFilters = {})
+    }
 }

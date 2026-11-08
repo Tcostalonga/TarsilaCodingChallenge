@@ -41,6 +41,10 @@ import tarsila.codingchallenge.ui.RecipeIntent
 import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.RecipeViewModel
 import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
+import tarsila.codingchallenge.ui.compose.placeholders.RecipesEmptyState
+import tarsila.codingchallenge.ui.compose.placeholders.RecipesErrorState
+import tarsila.codingchallenge.ui.compose.placeholders.RecipesLoadingState
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun RecipeScreen(viewModel: RecipeViewModel) {
@@ -176,72 +180,74 @@ private fun RecipeScreen(
 @Preview
 @Composable
 private fun RecipeScreenPreview() {
-    RecipeScreen(
-        uiState = RecipeUiState(
-            isSuccess = true,
-            isLoading = false,
-            isError = false,
-            recipes = listOf(
-                Recipe(
-                    id = 1,
-                    "Mushroom Risotto",
-                    "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
-                    3,
-                    listOf(
-                        "1 cup arborio rice",
-                        "250 g mushrooms, sliced",
-                        "1 shallot, finely chopped",
-                        "2 garlic cloves, minced",
-                        "1/2 cup dry white wine",
-                        "1 l hot vegetable broth",
-                        "2 tbsp butter",
-                        "1/2 cup grated parmesan",
-                        "Salt and pepper to taste"
-                    ),
-                    listOf(
-                        "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
-                        "In the same pan, sauté the shallot and garlic.",
-                        "Add the rice and toast for 2 minutes.",
-                        "Pour in the wine and stir until absorbed.",
-                        "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
-                        "Stir in the mushrooms, the remaining butter and the parmesan.",
-                        "Season and serve immediately."
-                    ),
-                    listOf(
-                        DietaryAttribute(
-                            id = 9383, name = "Gluten-free", contentColor = 4294831848, backgroundColor = 4287249178
-                        )
-                    )
-                ),
-                Recipe(
-                    id = 5,
-                    title = "Chickpea Salad",
-                    description = "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
-                    numberOfServings = 2,
-                    ingredients = listOf(
-                        "1 can chickpeas, drained and rinsed",
-                        "1 cucumber, diced",
-                        "1 cup cherry tomatoes, halved",
-                        "1/4 red onion, thinly sliced",
-                        "2 tbsp chopped parsley",
-                        "2 tbsp olive oil",
-                        "Juice of 1 lemon",
-                        "Salt and pepper to taste"
-                    ),
-                    cookingInstructions = listOf(
-                        "Combine the chickpeas, cucumber, tomatoes, red onion and parsley in a large bowl.",
-                        "Whisk the olive oil, lemon juice, salt and pepper in a small bowl.",
-                        "Pour the dressing over the salad and toss well.",
-                        "Let it rest for 10 minutes before serving."
-                    ),
-                    dietaryAttributes =
+    TarsilaCodingChallengeTheme {
+        RecipeScreen(
+            uiState = RecipeUiState(
+                isSuccess = true,
+                isLoading = false,
+                isError = false,
+                recipes = listOf(
+                    Recipe(
+                        id = 1,
+                        "Mushroom Risotto",
+                        "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
+                        3,
                         listOf(
-                            DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
-                            DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
+                            "1 cup arborio rice",
+                            "250 g mushrooms, sliced",
+                            "1 shallot, finely chopped",
+                            "2 garlic cloves, minced",
+                            "1/2 cup dry white wine",
+                            "1 l hot vegetable broth",
+                            "2 tbsp butter",
+                            "1/2 cup grated parmesan",
+                            "Salt and pepper to taste"
                         ),
+                        listOf(
+                            "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
+                            "In the same pan, sauté the shallot and garlic.",
+                            "Add the rice and toast for 2 minutes.",
+                            "Pour in the wine and stir until absorbed.",
+                            "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
+                            "Stir in the mushrooms, the remaining butter and the parmesan.",
+                            "Season and serve immediately."
+                        ),
+                        listOf(
+                            DietaryAttribute(
+                                id = 9383, name = "Gluten-free", contentColor = 4294831848, backgroundColor = 4287249178
+                            )
+                        )
+                    ),
+                    Recipe(
+                        id = 5,
+                        title = "Chickpea Salad",
+                        description = "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
+                        numberOfServings = 2,
+                        ingredients = listOf(
+                            "1 can chickpeas, drained and rinsed",
+                            "1 cucumber, diced",
+                            "1 cup cherry tomatoes, halved",
+                            "1/4 red onion, thinly sliced",
+                            "2 tbsp chopped parsley",
+                            "2 tbsp olive oil",
+                            "Juice of 1 lemon",
+                            "Salt and pepper to taste"
+                        ),
+                        cookingInstructions = listOf(
+                            "Combine the chickpeas, cucumber, tomatoes, red onion and parsley in a large bowl.",
+                            "Whisk the olive oil, lemon juice, salt and pepper in a small bowl.",
+                            "Pour the dressing over the salad and toss well.",
+                            "Let it rest for 10 minutes before serving."
+                        ),
+                        dietaryAttributes =
+                            listOf(
+                                DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
+                                DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
+                            ),
+                    )
                 )
-            )
-        ),
-        onIntent = {}
-    )
+            ),
+            onIntent = {}
+        )
+    }
 }

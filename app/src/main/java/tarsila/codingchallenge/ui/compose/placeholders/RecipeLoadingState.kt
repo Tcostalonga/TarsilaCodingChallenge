@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.ui.compose
+package tarsila.codingchallenge.ui.compose.placeholders
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +14,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -22,9 +21,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.R
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
-private val ProgressColor = Color(0xFFC96F4A)
-private val ProgressTrackColor = Color(0xFFF4EEE8)
 
 @Composable
 fun RecipesLoadingState(modifier: Modifier = Modifier) {
@@ -64,8 +62,8 @@ fun RecipesLoadingState(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .width(160.dp)
                 .height(6.dp),
-            color = ProgressColor,
-            trackColor = ProgressTrackColor
+            color = MaterialTheme.colorScheme.onPrimary,
+            trackColor = MaterialTheme.colorScheme.primary
         )
     }
 }
@@ -73,5 +71,7 @@ fun RecipesLoadingState(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 private fun RecipesLoadingStatePreview() {
-    RecipesLoadingState()
+    TarsilaCodingChallengeTheme {
+        RecipesLoadingState()
+    }
 }

@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
@@ -62,6 +63,7 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
 @Preview
 @Composable
 private fun RecipeItemPreview() {
+    TarsilaCodingChallengeTheme {
     RecipeItem(
         Recipe(
             id = 1,
@@ -96,4 +98,5 @@ private fun RecipeItemPreview() {
         ),
         onClick = {}
     )
+}
 }

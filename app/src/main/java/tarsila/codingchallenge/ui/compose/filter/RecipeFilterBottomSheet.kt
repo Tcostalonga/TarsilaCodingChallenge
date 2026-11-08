@@ -63,7 +63,7 @@ private fun RecipeFilterContent(
         SectionTitle(stringResource(R.string.filter_dietary_preferences))
         FilterDietaryAttributes(
             attributes = dietaryAttributes,
-            selected = filterDraft.dietaryAttributesIds.orEmpty(),
+            selected = filterDraft.dietaryAttributesIds,
             onToggle = { id ->
                 val current = filterDraft.dietaryAttributesIds
 

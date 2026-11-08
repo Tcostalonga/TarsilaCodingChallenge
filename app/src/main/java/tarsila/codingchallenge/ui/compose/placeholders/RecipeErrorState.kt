@@ -1,5 +1,6 @@
-package tarsila.codingchallenge.ui.compose
+package tarsila.codingchallenge.ui.compose.placeholders
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,15 +11,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -26,8 +26,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.R
-
-private val RetryColor = Color(0xFFC96F4A)
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun RecipesErrorState(
@@ -66,9 +65,11 @@ fun RecipesErrorState(
 
         Spacer(Modifier.height(24.dp))
 
-        Button(
+
+        OutlinedButton(
             onClick = onRetry,
-            colors = ButtonDefaults.buttonColors(containerColor = RetryColor)
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)
         ) {
             Icon(
                 imageVector = Icons.Filled.Refresh,
@@ -84,5 +85,7 @@ fun RecipesErrorState(
 @Preview(showBackground = true)
 @Composable
 private fun RecipesErrorStatePreview() {
-    RecipesErrorState(onRetry = {})
+    TarsilaCodingChallengeTheme {
+        RecipesErrorState(onRetry = {})
+    }
 }

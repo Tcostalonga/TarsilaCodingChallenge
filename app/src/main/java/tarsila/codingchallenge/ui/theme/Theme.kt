@@ -11,15 +11,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Terracotta80,
+    secondary = ClayGrey80,
+    tertiary = Olive80
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = Terracotta40,
+    secondary = ClayGrey40,
+    tertiary = Olive40
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -36,7 +36,7 @@ private val LightColorScheme = lightColorScheme(
 fun TarsilaCodingChallengeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
