@@ -11,9 +11,8 @@ interface RecipeApi {
 
     @GET("rest/v1/recipes/filtered")
     suspend fun getFilteredRecipes(
-        @Query("dietaryAttributesIds") dietaryAttributesIds: HashSet<Long>? = null,
-        @Query("minServings") minServings: Int? = null,
-        @Query("maxServings") maxServings: Int? = null
+        @Query("dietaryAttributesIds") dietaryAttributesIds: Set<Long>? = null,
+        @Query("servings") servings: Int? = null,
     ): List<RecipeResponse>
 }
 

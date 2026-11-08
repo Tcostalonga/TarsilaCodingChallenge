@@ -18,18 +18,18 @@ import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun FilterDietaryAttributes(
-    attributes: List<DietaryAttribute>,
-    selected: Set<String>,
-    onToggle: (String) -> Unit
+    attributes: Set<DietaryAttribute>,
+    selected: Set<Long>,
+    onToggle: (id: Long) -> Unit
 ) {
     FlowRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         attributes.forEach { attribute ->
-            val isSelected = attribute.name in selected
+            val isSelected = attribute.id in selected
             FilterChip(
                 selected = isSelected,
-                onClick = { onToggle(attribute.name) },
+                onClick = { onToggle(attribute.id) },
                 label = { Text(attribute.name) },
                 leadingIcon = if (isSelected) {
                     { Icon(Icons.Filled.Check, contentDescription = null) }
@@ -55,7 +55,7 @@ private fun FilterDietaryAttributesPreview() {
     TarsilaCodingChallengeTheme {
         Surface {
             FilterDietaryAttributes(
-                attributes = listOf(
+                attributes = setOf(
                     DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
                     DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
                 ),

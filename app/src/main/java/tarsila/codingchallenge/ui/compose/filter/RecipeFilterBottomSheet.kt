@@ -12,9 +12,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,31 +27,29 @@ import tarsila.codingchallenge.R
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
-val Terracotta = Color(0xFFC96F4A)
-
 @Composable
 fun RecipeFilterBottomSheet(
+    dietaryAttributes: Set<DietaryAttribute>,
     onDismissRequest: () -> Unit,
-    onFilterRecipes: () -> Unit,
+    onFilterRecipes: (RecipeFilter) -> Unit,
 ) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    ModalBottomSheet(onDismissRequest = onDismissRequest) {
+    ModalBottomSheet(onDismissRequest = onDismissRequest, sheetState = sheetState) {
         RecipeFilterContent(
-            listOf(
-                DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
-                DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
-            ),
+            dietaryAttributes = dietaryAttributes,
             onFilterRecipes = onFilterRecipes
         )
-
     }
 }
 
 @Composable
 private fun RecipeFilterContent(
-    dietaryAttributes: List<DietaryAttribute>,
-    onFilterRecipes: () -> Unit,
+    dietaryAttributes: Set<DietaryAttribute>,
+    onFilterRecipes: (RecipeFilter) -> Unit,
 ) {
+    var filterDraft by rememberSaveable { mutableStateOf(RecipeFilter()) }
+
     Column(
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
@@ -61,14 +63,12 @@ private fun RecipeFilterContent(
         SectionTitle(stringResource(R.string.filter_dietary_preferences))
         FilterDietaryAttributes(
             attributes = dietaryAttributes,
-            selected = setOf(),
-            onToggle = { name ->
-/*                val current = draft.dietaryAttributes
-                onDraftChange(
-                    draft.copy(
-                        dietaryAttributes = if (name in current) current - name else current + name
-                    )
-                )*/
+            selected = filterDraft.dietaryAttributesIds.orEmpty(),
+            onToggle = { id ->
+                val current = filterDraft.dietaryAttributesIds
+
+                val newDietaryAttributesIds = if (id in current) current - id else current + id
+                filterDraft = filterDraft.copy(dietaryAttributesIds = newDietaryAttributesIds)
             }
         )
 
@@ -76,20 +76,20 @@ private fun RecipeFilterContent(
 
         SectionTitle(stringResource(R.string.filter_servings_label))
         FilterServings(
-            min = 0,
-            max = 0,
-            onChange = { i: Int?, i1: Int? -> }
+            servings = filterDraft.servings,
+            onChange = { servings: Int? ->
+                filterDraft = filterDraft.copy(servings = servings)
+            }
         )
 
         Button(
-            onClick = onFilterRecipes,
+            onClick = { onFilterRecipes(filterDraft) },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(vertical = 24.dp)
         ) {
             Text(stringResource(R.string.filter_recipes_text_button))
         }
-
     }
 }
 
@@ -109,7 +109,7 @@ private fun RecipesFilterPreview() {
     TarsilaCodingChallengeTheme {
         Surface {
             RecipeFilterContent(
-                dietaryAttributes = listOf(
+                dietaryAttributes = setOf(
                     DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
                     DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
                 ),

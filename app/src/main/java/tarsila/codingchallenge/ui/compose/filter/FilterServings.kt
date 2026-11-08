@@ -12,10 +12,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -30,36 +26,18 @@ private const val SERVINGS_MAX_DIGITS = 2
 
 @Composable
 fun FilterServings(
-    min: Int?,
-    max: Int?,
-    onChange: (min: Int?, max: Int?) -> Unit,
+    servings: Int?,
+    onChange: (servings: Int?) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val isInvalid = min != null && max != null && min > max
-
     Column(modifier = modifier) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             ServingsField(
-                label = stringResource(R.string.min),
-                value = min,
-                onValueChange = { onChange(it, max) },
-                isError = isInvalid,
-                imeAction = ImeAction.Next,
-                modifier = Modifier.weight(1f)
-            )
-            Text(
-                text = stringResource(R.string.to),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            ServingsField(
-                label = stringResource(R.string.max),
-                value = max,
-                onValueChange = { onChange(min, it) },
-                isError = isInvalid,
+                value = servings,
+                onValueChange = onChange,
                 imeAction = ImeAction.Done,
                 modifier = Modifier.weight(1f)
             )
@@ -68,17 +46,9 @@ fun FilterServings(
         Spacer(Modifier.height(6.dp))
 
         Text(
-            text = if (isInvalid) {
-                stringResource(R.string.filter_servings_invalid_rule)
-            } else {
-                stringResource(R.string.filter_servings_valid_rule)
-            },
+            text = stringResource(R.string.filter_servings_valid_rule),
             style = MaterialTheme.typography.bodySmall,
-            color = if (isInvalid) {
-                MaterialTheme.colorScheme.error
-            } else {
-                MaterialTheme.colorScheme.onSurfaceVariant
-            },
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(start = 4.dp)
         )
     }
@@ -86,10 +56,8 @@ fun FilterServings(
 
 @Composable
 private fun ServingsField(
-    label: String,
     value: Int?,
     onValueChange: (Int?) -> Unit,
-    isError: Boolean,
     imeAction: ImeAction,
     modifier: Modifier = Modifier
 ) {
@@ -99,11 +67,9 @@ private fun ServingsField(
             val digits = text.filter(Char::isDigit).take(SERVINGS_MAX_DIGITS)
             onValueChange(digits.toIntOrNull())
         },
-        label = { Text(label) },
         placeholder = { Text(stringResource(R.string.any)) },
         suffix = { Text(stringResource(R.string.filter_servings_label)) },
         singleLine = true,
-        isError = isError,
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Number,
             imeAction = imeAction
@@ -115,14 +81,11 @@ private fun ServingsField(
 @Preview
 @Composable
 private fun FilterServingsPreview() {
-    var min by remember { mutableStateOf<Int?>(null) }
-    var max by remember { mutableStateOf<Int?>(null) }
     TarsilaCodingChallengeTheme {
         Surface {
             FilterServings(
-                min = min,
-                max = max,
-                onChange = { newMin, newMax -> min = newMin; max = newMax },
+                servings = 4,
+                onChange = { },
                 modifier = Modifier.padding(16.dp)
             )
         }

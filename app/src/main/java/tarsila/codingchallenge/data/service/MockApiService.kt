@@ -36,21 +36,19 @@ class MockApiService(private val context: Context) : RecipeApi {
     }
 
     override suspend fun getFilteredRecipes(
-        dietaryAttributesIds: HashSet<Long>?,
-        minServings: Int?,
-        maxServings: Int?
+        dietaryAttributesIds: Set<Long>?,
+        servings: Int?,
     ): List<RecipeResponse> {
         return try {
             val allRecipes = getRecipes()
             allRecipes.filter { recipe ->
-                val dietaryAttributesSet = recipe.dietaryAttributes.map { it.id }.toHashSet()
+                val dietaryAttributesSet = recipe.dietaryAttributes.map { it.id }.toSet()
 
-                val matchesDietary = dietaryAttributesIds?.containsAll(dietaryAttributesSet) ?: true
+                val matchesDietary = dietaryAttributesIds.isNullOrEmpty() || dietaryAttributesSet.containsAll(dietaryAttributesIds)
 
-                val matchesMinServings = minServings == null || recipe.numberOfServings >= minServings
-                val matchesMaxServings = maxServings == null || recipe.numberOfServings <= maxServings
+                val matchesMinServings = servings == null || recipe.numberOfServings <= servings
 
-                matchesDietary && matchesMinServings && matchesMaxServings
+                matchesDietary && matchesMinServings
             }
         } catch (e: Exception) {
             Log.e("RecipeServiceImpl", "Error to return remote filtered list of recipes - ${e.message}")

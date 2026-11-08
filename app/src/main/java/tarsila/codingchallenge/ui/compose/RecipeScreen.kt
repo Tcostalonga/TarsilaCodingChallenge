@@ -57,7 +57,7 @@ fun RecipeScreen(viewModel: RecipeViewModel) {
 }
 
 @Composable
-fun RecipeScreen(
+private fun RecipeScreen(
     uiState: RecipeUiState,
     onIntent: (RecipeIntent) -> Unit,
 ) {
@@ -67,10 +67,14 @@ fun RecipeScreen(
 
     if (showFilterBottomSheet) {
         RecipeFilterBottomSheet(
+            dietaryAttributes = uiState.dietaryAttributeList,
             onDismissRequest = {
                 showFilterBottomSheet = false
             },
-            onFilterRecipes = {}
+            onFilterRecipes = {
+                onIntent(RecipeIntent.OnFilterRecipes(it))
+                showFilterBottomSheet = false
+            }
         )
     }
 
@@ -84,23 +88,25 @@ fun RecipeScreen(
                     )
                 },
                 actions = {
-                    IconButton(onClick = {
-                        showFilterBottomSheet = true
-                    }, content = {
-                        Icon(
-                            Icons.Default.FilterAlt,
-                            contentDescription = stringResource(R.string.filter_recipes_label)
-                        )
-                    })
+                    if (uiState.isSuccess) {
+                        IconButton(onClick = {
+                            showFilterBottomSheet = true
+                        }, content = {
+                            Icon(
+                                Icons.Default.FilterAlt,
+                                contentDescription = stringResource(R.string.filter_recipes_label)
+                            )
+                        })
 
-                    IconButton(onClick = {
-                        onIntent(RecipeIntent.ShowSearchField)
-                    }, content = {
-                        Icon(
-                            Icons.Default.Search,
-                            contentDescription = stringResource(R.string.search_recipes_label)
-                        )
-                    })
+                        IconButton(onClick = {
+                            onIntent(RecipeIntent.ShowSearchField)
+                        }, content = {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.search_recipes_label)
+                            )
+                        })
+                    }
                 }
             )
         }

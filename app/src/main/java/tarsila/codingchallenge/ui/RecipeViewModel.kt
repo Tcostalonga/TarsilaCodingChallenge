@@ -7,12 +7,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeRepository
+import tarsila.codingchallenge.ui.compose.filter.RecipeFilter
 
 class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewModel() {
 
-    private var _uiState = MutableStateFlow(RecipeUiState(emptyList()))
+    private var _uiState = MutableStateFlow(RecipeUiState())
     val uiState = _uiState.asStateFlow()
 
     fun onIntent(intent: RecipeIntent) {
@@ -20,6 +22,7 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
             is RecipeIntent.OnRecipeClick -> updateRecipeDetailVisibility(intent.recipe)
             RecipeIntent.OnTryToFetchRecipes -> getRecipes()
             RecipeIntent.ShowSearchField -> updateSearchFieldVisibility()
+            is RecipeIntent.OnFilterRecipes -> getFilteredRecipes(intent.filter)
         }
     }
 
@@ -42,8 +45,10 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
 
             recipeRepository.getAllRecipes()
                 .onSuccess { recipes ->
+                    val dietaryAttributeList = recipes.allDietaryAttributes()
+
                     _uiState.update {
-                        it.success(recipes)
+                        it.success(recipes).copy(dietaryAttributeList = dietaryAttributeList)
                     }
                 }
                 .onFailure {
@@ -57,10 +62,36 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
             it.copy(showSearchField = !it.showSearchField)
         }
     }
+
+    private fun getFilteredRecipes(filter: RecipeFilter) {
+        viewModelScope.launch {
+            _uiState.update { it.loading() }
+
+            recipeRepository.getFilteredRecipes(
+                filter.dietaryAttributesIds,
+                filter.servings,
+            )
+                .onSuccess { recipes ->
+                    _uiState.update {
+                        it.success(recipes)
+                    }
+                }
+                .onFailure {
+                    _uiState.update { it.error() }
+                }
+        }
+    }
+
+    private fun List<Recipe>.allDietaryAttributes(): Set<DietaryAttribute> =
+        flatMap { it.dietaryAttributes }
+            .distinctBy { it.name }
+            .sortedBy { it.name }
+            .toSet()
 }
 
 data class RecipeUiState(
-    val recipes: List<Recipe>,
+    val recipes: List<Recipe> = emptyList(),
+    val dietaryAttributeList: Set<DietaryAttribute> = setOf(),
     val isSuccess: Boolean = false,
     val isLoading: Boolean = false,
     val isError: Boolean = false,
