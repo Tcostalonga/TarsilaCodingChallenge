@@ -4,15 +4,27 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import tarsila.codingchallenge.data.mapper.toRecipeList
 import tarsila.codingchallenge.data.service.RecipeApi
+import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeRepository
 
 class RecipeRepositoryImpl(private val recipeApi: RecipeApi) : RecipeRepository {
 
-    override suspend fun fetchRecipes(): Result<List<Recipe>> {
+    override suspend fun getAllRecipes(): Result<List<Recipe>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                recipeApi.fetchRecipes().toRecipeList()
+                recipeApi.getRecipes().toRecipeList()
+            }
+        }
+    }
+
+    override suspend fun getFilteredRecipes(
+        dietaryAttribute: List<DietaryAttribute>,
+        numberOfServings: IntRange
+    ): Result<List<Recipe>> {
+        return withContext(Dispatchers.IO) {
+            runCatching {
+                recipeApi.getFilteredRecipes().toRecipeList()
             }
         }
     }

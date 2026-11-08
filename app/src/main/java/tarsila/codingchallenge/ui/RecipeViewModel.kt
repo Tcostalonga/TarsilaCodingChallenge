@@ -15,29 +15,11 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
     private var _uiState = MutableStateFlow(RecipeUiState(emptyList()))
     val uiState = _uiState.asStateFlow()
 
-    init {
-        fetchRecipes()
-    }
-
-    private fun fetchRecipes() {
-        viewModelScope.launch {
-            _uiState.update { it.loading() }
-
-            recipeRepository.fetchRecipes()
-                .onSuccess { recipes ->
-                    _uiState.update {
-                        it.success(recipes)
-                    }
-                }
-                .onFailure {
-                    _uiState.update { it.error() }
-                }
-        }
-    }
-
     fun onIntent(intent: RecipeIntent) {
         when (intent) {
             is RecipeIntent.OnRecipeClick -> updateRecipeDetailVisibility(intent.recipe)
+            RecipeIntent.OnTryToFetchRecipes -> getRecipes()
+            RecipeIntent.ShowSearchField -> updateSearchFieldVisibility()
         }
     }
 
@@ -54,6 +36,27 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
 
     }
 
+    private fun getRecipes() {
+        viewModelScope.launch {
+            _uiState.update { it.loading() }
+
+            recipeRepository.getAllRecipes()
+                .onSuccess { recipes ->
+                    _uiState.update {
+                        it.success(recipes)
+                    }
+                }
+                .onFailure {
+                    _uiState.update { it.error() }
+                }
+        }
+    }
+
+    private fun updateSearchFieldVisibility() {
+        _uiState.update {
+            it.copy(showSearchField = !it.showSearchField)
+        }
+    }
 }
 
 data class RecipeUiState(
@@ -61,13 +64,13 @@ data class RecipeUiState(
     val isSuccess: Boolean = false,
     val isLoading: Boolean = false,
     val isError: Boolean = false,
+    val showSearchField: Boolean = false
 ) {
     fun success(recipes: List<Recipe>) = copy(recipes = recipes, isSuccess = true, isLoading = false, isError = false)
     fun loading() = copy(isSuccess = false, isLoading = true, isError = false)
     fun error() = copy(isSuccess = false, isLoading = false, isError = true)
 
 }
-
 
 class ViewModelFactory(private val recipeRepository: RecipeRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

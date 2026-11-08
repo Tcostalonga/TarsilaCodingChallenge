@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import tarsila.codingchallenge.data.repository.RecipeRepositoryImpl
-import tarsila.codingchallenge.data.service.RecipeServiceApi
+import tarsila.codingchallenge.data.service.MockApiService
 import tarsila.codingchallenge.ui.RecipeViewModel
 import tarsila.codingchallenge.ui.ViewModelFactory
 import tarsila.codingchallenge.ui.compose.RecipeScreen
@@ -15,7 +15,7 @@ import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 class MainActivity : ComponentActivity() {
 
     private val viewModel: RecipeViewModel by viewModels<RecipeViewModel> {
-        val recipeApi = RecipeServiceApi(application.applicationContext)
+        val recipeApi = MockApiService(application.applicationContext)
         val repository = RecipeRepositoryImpl(recipeApi)
 
         ViewModelFactory(repository)
