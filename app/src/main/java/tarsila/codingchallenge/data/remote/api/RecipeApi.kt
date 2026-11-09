@@ -1,8 +1,8 @@
-package tarsila.codingchallenge.data.service
+package tarsila.codingchallenge.data.remote.api
 
 import retrofit2.http.GET
 import retrofit2.http.Query
-import tarsila.codingchallenge.data.model.RecipeResponse
+import tarsila.codingchallenge.data.remote.model.RecipeResponse
 
 interface RecipeApi {
 

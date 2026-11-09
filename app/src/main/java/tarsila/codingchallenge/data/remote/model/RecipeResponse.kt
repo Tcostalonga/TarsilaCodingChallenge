@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.data.model
+package tarsila.codingchallenge.data.remote.model
 
 import kotlinx.serialization.Serializable
 

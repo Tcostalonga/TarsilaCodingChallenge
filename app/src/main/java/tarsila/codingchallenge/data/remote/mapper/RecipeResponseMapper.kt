@@ -1,7 +1,7 @@
-package tarsila.codingchallenge.data.mapper
+package tarsila.codingchallenge.data.remote.mapper
 
-import tarsila.codingchallenge.data.model.DietaryAttributeResponse
-import tarsila.codingchallenge.data.model.RecipeResponse
+import tarsila.codingchallenge.data.remote.model.DietaryAttributeResponse
+import tarsila.codingchallenge.data.remote.model.RecipeResponse
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
 

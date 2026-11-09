@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.ui
+package tarsila.codingchallenge.ui.compose
 
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter

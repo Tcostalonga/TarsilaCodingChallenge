@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.data.service
+package tarsila.codingchallenge.data.remote.apimockservice
 
 import android.content.Context
 import android.util.Log
@@ -7,8 +7,9 @@ import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 import tarsila.codingchallenge.R
-import tarsila.codingchallenge.data.model.RecipeResponse
-import tarsila.codingchallenge.data.util.normalizeForSearch
+import tarsila.codingchallenge.data.remote.api.RecipeApi
+import tarsila.codingchallenge.data.remote.model.RecipeResponse
+import tarsila.codingchallenge.data.remote.util.normalizeForSearch
 
 class MockApiService(private val context: Context) : RecipeApi {
     private val json = Json {

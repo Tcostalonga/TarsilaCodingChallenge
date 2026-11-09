@@ -44,11 +44,10 @@ import tarsila.codingchallenge.R
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter
-import tarsila.codingchallenge.ui.RecipeIntent
 import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.RecipeViewModel
 import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
-import tarsila.codingchallenge.ui.compose.filter.SearchQuery
+import tarsila.codingchallenge.ui.compose.filter.FilterSearchText
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesEmptyState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesErrorState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesLoadingState
@@ -139,7 +138,7 @@ private fun RecipeScreen(
                         }
                     }
                 )
-                SearchQuery(uiState, searchInstructionsQuery)
+                FilterSearchText(uiState, searchInstructionsQuery)
             }
 
         }

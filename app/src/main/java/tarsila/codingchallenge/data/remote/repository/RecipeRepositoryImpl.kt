@@ -1,9 +1,9 @@
-package tarsila.codingchallenge.data.repository
+package tarsila.codingchallenge.data.remote.repository
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import tarsila.codingchallenge.data.mapper.toRecipeList
-import tarsila.codingchallenge.data.service.RecipeApi
+import tarsila.codingchallenge.data.remote.mapper.toRecipeList
+import tarsila.codingchallenge.data.remote.api.RecipeApi
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeRepository
 

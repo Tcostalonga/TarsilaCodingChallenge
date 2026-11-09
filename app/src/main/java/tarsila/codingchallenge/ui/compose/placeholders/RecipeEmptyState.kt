@@ -73,7 +73,7 @@ fun RecipesEmptyState(
     }
 }
 
-@Preview(showBackground = true, heightDp = 640)
+@Preview(showBackground = true)
 @Composable
 private fun RecipesEmptyStatePreview() {
     TarsilaCodingChallengeTheme {

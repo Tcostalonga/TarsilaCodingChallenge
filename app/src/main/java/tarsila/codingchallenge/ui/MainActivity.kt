@@ -1,14 +1,12 @@
-package tarsila.codingchallenge
+package tarsila.codingchallenge.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import tarsila.codingchallenge.data.repository.RecipeRepositoryImpl
-import tarsila.codingchallenge.data.service.MockApiService
-import tarsila.codingchallenge.ui.RecipeViewModel
-import tarsila.codingchallenge.ui.ViewModelFactory
+import tarsila.codingchallenge.data.remote.repository.RecipeRepositoryImpl
+import tarsila.codingchallenge.data.remote.apimockservice.MockApiService
 import tarsila.codingchallenge.ui.compose.RecipeScreen
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 

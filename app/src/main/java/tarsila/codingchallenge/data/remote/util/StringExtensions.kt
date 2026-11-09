@@ -1,4 +1,4 @@
-package tarsila.codingchallenge.data.util
+package tarsila.codingchallenge.data.remote.util
 
 import java.text.Normalizer
 

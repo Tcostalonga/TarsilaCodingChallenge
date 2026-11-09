@@ -12,6 +12,7 @@ import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.domain.RecipeRepository
+import tarsila.codingchallenge.ui.compose.RecipeIntent
 
 class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewModel() {
 
