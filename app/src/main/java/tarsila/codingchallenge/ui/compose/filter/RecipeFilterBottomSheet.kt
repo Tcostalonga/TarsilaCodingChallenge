@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -14,30 +15,31 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.R
 import tarsila.codingchallenge.domain.DietaryAttribute
+import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun RecipeFilterBottomSheet(
     dietaryAttributes: Set<DietaryAttribute>,
+    filterDraft: RecipeFilter,
+    onChangeFilter: (RecipeFilter) -> Unit,
+    onFilterRecipes: () -> Unit,
     onDismissRequest: () -> Unit,
-    onFilterRecipes: (RecipeFilter) -> Unit,
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     ModalBottomSheet(onDismissRequest = onDismissRequest, sheetState = sheetState) {
         RecipeFilterContent(
             dietaryAttributes = dietaryAttributes,
+            filterDraft = filterDraft,
+            onChangeFilter = onChangeFilter,
             onFilterRecipes = onFilterRecipes
         )
     }
@@ -46,10 +48,10 @@ fun RecipeFilterBottomSheet(
 @Composable
 private fun RecipeFilterContent(
     dietaryAttributes: Set<DietaryAttribute>,
-    onFilterRecipes: (RecipeFilter) -> Unit,
+    filterDraft: RecipeFilter,
+    onChangeFilter: (RecipeFilter) -> Unit,
+    onFilterRecipes: () -> Unit,
 ) {
-    var filterDraft by remember { mutableStateOf(RecipeFilter()) }
-
     Column(
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
@@ -66,9 +68,9 @@ private fun RecipeFilterContent(
             selected = filterDraft.dietaryAttributesIds,
             onToggle = { id ->
                 val current = filterDraft.dietaryAttributesIds
-
                 val newDietaryAttributesIds = if (id in current) current - id else current + id
-                filterDraft = filterDraft.copy(dietaryAttributesIds = newDietaryAttributesIds)
+
+                onChangeFilter(filterDraft.copy(dietaryAttributesIds = newDietaryAttributesIds))
             }
         )
 
@@ -78,15 +80,16 @@ private fun RecipeFilterContent(
         FilterServings(
             servings = filterDraft.servings,
             onChange = { servings: Int? ->
-                filterDraft = filterDraft.copy(servings = servings)
+                onChangeFilter(filterDraft.copy(servings = servings))
             }
         )
 
         Button(
-            onClick = { onFilterRecipes(filterDraft) },
+            onClick = onFilterRecipes,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 24.dp)
+                .padding(vertical = 24.dp),
+            colors = ButtonDefaults.buttonColors(contentColor = MaterialTheme.colorScheme.background)
         ) {
             Text(stringResource(R.string.filter_recipes_text_button))
         }
@@ -103,7 +106,7 @@ private fun SectionTitle(text: String) {
     )
 }
 
-@Preview
+@PreviewLightDark
 @Composable
 private fun RecipesFilterPreview() {
     TarsilaCodingChallengeTheme {
@@ -113,7 +116,10 @@ private fun RecipesFilterPreview() {
                     DietaryAttribute(21, "Vegan", 4293787637, 4278210850),
                     DietaryAttribute(93, "Lactose-free", 4294243831, 4282336848)
                 ),
-                onFilterRecipes = {})
+                onFilterRecipes = {},
+                filterDraft = RecipeFilter(),
+                onChangeFilter = {}
+            )
         }
     }
 }

@@ -1,14 +1,12 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
+@file:OptIn(ExperimentalMaterial3Api::class, FlowPreview::class)
 
 package tarsila.codingchallenge.ui.compose
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.input.rememberTextFieldState
@@ -21,30 +19,42 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.flowWithLifecycle
+import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
 import tarsila.codingchallenge.R
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
+import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.ui.RecipeIntent
 import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.RecipeViewModel
 import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
+import tarsila.codingchallenge.ui.compose.filter.SearchQuery
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesEmptyState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesErrorState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesLoadingState
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
+
+private const val SEARCH_DEBOUNCE = 1
 
 @Composable
 fun RecipeScreen(viewModel: RecipeViewModel) {
@@ -65,18 +75,33 @@ private fun RecipeScreen(
     uiState: RecipeUiState,
     onIntent: (RecipeIntent) -> Unit,
 ) {
-    val searchText = rememberTextFieldState()
-
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val searchInstructionsQuery = rememberTextFieldState()
+    var filterDraft by remember { mutableStateOf(RecipeFilter()) }
     var showFilterBottomSheet by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(searchInstructionsQuery) {
+        snapshotFlow { searchInstructionsQuery.text.toString() }
+            .distinctUntilChanged()
+            .debounce(SEARCH_DEBOUNCE.seconds)
+            .flowWithLifecycle(lifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+            .collect { query ->
+                onIntent(RecipeIntent.OnFilterRecipes(filterDraft.copy(instructionsQuery = query)))
+            }
+    }
 
     if (showFilterBottomSheet) {
         RecipeFilterBottomSheet(
+            filterDraft = filterDraft,
             dietaryAttributes = uiState.dietaryAttributeList,
-            onDismissRequest = {
-                showFilterBottomSheet = false
+            onChangeFilter = { recipeFilter ->
+                filterDraft = recipeFilter
             },
             onFilterRecipes = {
-                onIntent(RecipeIntent.OnFilterRecipes(it))
+                onIntent(RecipeIntent.OnFilterRecipes(filterDraft))
+                showFilterBottomSheet = false
+            },
+            onDismissRequest = {
                 showFilterBottomSheet = false
             }
         )
@@ -84,35 +109,39 @@ private fun RecipeScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                {
-                    Text(
-                        text = stringResource(R.string.explore_recipes),
-                        style = MaterialTheme.typography.headlineMedium
-                    )
-                },
-                actions = {
-                    if (uiState.isSuccess) {
-                        IconButton(onClick = {
-                            showFilterBottomSheet = true
-                        }, content = {
-                            Icon(
-                                Icons.Default.FilterAlt,
-                                contentDescription = stringResource(R.string.filter_recipes_label)
-                            )
-                        })
+            Column {
+                TopAppBar(
+                    {
+                        Text(
+                            text = stringResource(R.string.explore_recipes),
+                            style = MaterialTheme.typography.headlineMedium
+                        )
+                    },
+                    actions = {
+                        if (uiState.isSuccess) {
+                            IconButton(onClick = {
+                                showFilterBottomSheet = true
+                            }, content = {
+                                Icon(
+                                    Icons.Default.FilterAlt,
+                                    contentDescription = stringResource(R.string.filter_recipes_label)
+                                )
+                            })
 
-                        IconButton(onClick = {
-                            onIntent(RecipeIntent.ShowSearchField)
-                        }, content = {
-                            Icon(
-                                Icons.Default.Search,
-                                contentDescription = stringResource(R.string.search_recipes_label)
-                            )
-                        })
+                            IconButton(onClick = {
+                                onIntent(RecipeIntent.ShowSearchField)
+                            }, content = {
+                                Icon(
+                                    Icons.Default.Search,
+                                    contentDescription = stringResource(R.string.search_recipes_label)
+                                )
+                            })
+                        }
                     }
-                }
-            )
+                )
+                SearchQuery(uiState, searchInstructionsQuery)
+            }
+
         }
     ) { paddingValues ->
         LazyColumn(
@@ -120,17 +149,6 @@ private fun RecipeScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             contentPadding = paddingValues,
         ) {
-            item {
-                AnimatedVisibility(uiState.showSearchField) {
-                    TextField(
-                        state = searchText,
-                        label = { Text(text = stringResource(R.string.search_recipes_hint)) },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp)
-                    )
-                }
-            }
             when {
                 uiState.isLoading -> {
                     item {
@@ -177,7 +195,7 @@ private fun RecipeScreen(
     }
 }
 
-@Preview
+@PreviewLightDark
 @Composable
 private fun RecipeScreenPreview() {
     TarsilaCodingChallengeTheme {

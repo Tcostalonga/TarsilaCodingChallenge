@@ -2,11 +2,13 @@ package tarsila.codingchallenge.data.service
 
 import android.content.Context
 import android.util.Log
+import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 import tarsila.codingchallenge.R
 import tarsila.codingchallenge.data.model.RecipeResponse
+import tarsila.codingchallenge.data.util.normalizeForSearch
 
 class MockApiService(private val context: Context) : RecipeApi {
     private val json = Json {
@@ -22,7 +24,7 @@ class MockApiService(private val context: Context) : RecipeApi {
                 }
 
             val result = json.decodeFromString<List<RecipeResponse>>(jsonString)
-            simulateNetworkDelay()
+            simulateNetworkDelay(3.seconds)
             result
         } catch (e: Exception) {
             /**
@@ -36,25 +38,40 @@ class MockApiService(private val context: Context) : RecipeApi {
     }
 
     override suspend fun getFilteredRecipes(
-        dietaryAttributesIds: Set<Long>?,
+        dietaryIds: Set<Long>?,
         servings: Int?,
+        includeIngredients: Set<String>?,
+        excludeIngredients: Set<String>?,
+        instructionsQuery: String?,
     ): List<RecipeResponse> {
         return try {
+            val include = includeIngredients.orEmpty().map { it.normalizeForSearch() }
+            val exclude = excludeIngredients.orEmpty().map { it.normalizeForSearch() }
+            val query = instructionsQuery?.normalizeForSearch().orEmpty()
+
             val allRecipes = getRecipes()
             allRecipes.filter { recipe ->
-                val dietaryAttributesSet = recipe.dietaryAttributes.map { it.id }.toSet()
+                val recipeDietaryIds = recipe.dietaryAttributes.map { it.id }.toSet()
+                val ingredients = recipe.ingredients.map { it.normalizeForSearch() }
+                val instructions = recipe.cookingInstructions.map { it.normalizeForSearch() }
 
-                val matchesDietary = dietaryAttributesIds.isNullOrEmpty() || dietaryAttributesSet.containsAll(dietaryAttributesIds)
+                val matchesDietary = dietaryIds.isNullOrEmpty() ||
+                        recipeDietaryIds.containsAll(dietaryIds)
 
-                val matchesMinServings = servings == null || recipe.numberOfServings <= servings
+                val matchesServings = servings == null || recipe.numberOfServings <= servings
 
-                matchesDietary && matchesMinServings
+                val hasAllIncluded = include.all { term -> ingredients.any { it.contains(term) } }
+                val hasAnyExcluded = exclude.any { term -> ingredients.any { it.contains(term) } }
+
+                val matchesInstructions = query.isBlank() || instructions.any { it.contains(query) }
+
+                matchesDietary && matchesServings && hasAllIncluded && !hasAnyExcluded && matchesInstructions
             }
         } catch (e: Exception) {
-            Log.e("RecipeServiceImpl", "Error to return remote filtered list of recipes - ${e.message}")
+            Log.e("MockApiService", "Error to return filtered list of recipes - ${e.message}")
             throw e
         }
     }
 
-    private suspend fun simulateNetworkDelay() = delay(3.seconds)
+    private suspend fun simulateNetworkDelay(timeInSeconds: Duration) = delay(timeInSeconds)
 }

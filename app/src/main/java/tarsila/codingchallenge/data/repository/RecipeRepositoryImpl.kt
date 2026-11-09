@@ -20,12 +20,18 @@ class RecipeRepositoryImpl(private val recipeApi: RecipeApi) : RecipeRepository 
     override suspend fun getFilteredRecipes(
         dietaryAttributeIds: Set<Long>?,
         servings: Int?,
+        includeIngredients: Set<String>?,
+        excludeIngredients: Set<String>?,
+        instructionsQuery: String?
     ): Result<List<Recipe>> {
         return withContext(Dispatchers.IO) {
             runCatching {
                 recipeApi.getFilteredRecipes(
-                    dietaryAttributeIds,
-                    servings
+                    dietaryIds = dietaryAttributeIds,
+                    servings = servings,
+                    includeIngredients = includeIngredients,
+                    excludeIngredients = excludeIngredients,
+                    instructionsQuery = instructionsQuery,
                 ).toRecipeList()
             }
         }

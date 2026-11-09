@@ -3,19 +3,22 @@ package tarsila.codingchallenge.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import tarsila.codingchallenge.domain.DietaryAttribute
 import tarsila.codingchallenge.domain.Recipe
+import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.domain.RecipeRepository
-import tarsila.codingchallenge.ui.compose.filter.RecipeFilter
 
 class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewModel() {
 
     private var _uiState = MutableStateFlow(RecipeUiState())
     val uiState = _uiState.asStateFlow()
+
+    private var searchJob: Job? = null
 
     fun onIntent(intent: RecipeIntent) {
         when (intent) {
@@ -36,7 +39,6 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
         }
 
         _uiState.update { it.copy(recipes = newRecipeList) }
-
     }
 
     private fun getRecipes() {
@@ -64,12 +66,15 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
     }
 
     private fun getFilteredRecipes(filter: RecipeFilter) {
-        viewModelScope.launch {
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch {
             _uiState.update { it.loading() }
-
             recipeRepository.getFilteredRecipes(
-                filter.dietaryAttributesIds,
-                filter.servings,
+                dietaryAttributeIds = filter.dietaryAttributesIds,
+                servings = filter.servings,
+                includeIngredients = filter.includeIngredients,
+                excludeIngredients = filter.excludeIngredients,
+                instructionsQuery = filter.instructionsQuery,
             )
                 .onSuccess { recipes ->
                     _uiState.update {

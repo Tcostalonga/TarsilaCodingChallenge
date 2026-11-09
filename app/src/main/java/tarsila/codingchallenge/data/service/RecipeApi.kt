@@ -11,9 +11,10 @@ interface RecipeApi {
 
     @GET("rest/v1/recipes/filtered")
     suspend fun getFilteredRecipes(
-        @Query("dietaryAttributesIds") dietaryAttributesIds: Set<Long>? = null,
+        @Query("dietaryIds") dietaryIds: Set<Long>? = null,
         @Query("servings") servings: Int? = null,
+        @Query("includeIngredients") includeIngredients: Set<String>? = null,
+        @Query("excludeIngredients") excludeIngredients: Set<String>? = null,
+        @Query("instructionsQuery") instructionsQuery: String? = null,
     ): List<RecipeResponse>
 }
-
-

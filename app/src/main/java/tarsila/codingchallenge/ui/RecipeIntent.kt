@@ -1,7 +1,7 @@
 package tarsila.codingchallenge.ui
 
 import tarsila.codingchallenge.domain.Recipe
-import tarsila.codingchallenge.ui.compose.filter.RecipeFilter
+import tarsila.codingchallenge.domain.RecipeFilter
 
 sealed interface RecipeIntent {
     data class OnRecipeClick(val recipe: Recipe) : RecipeIntent
