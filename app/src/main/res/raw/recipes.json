@@ -1,6 +1,1293 @@
 [
   {
     "id": 1,
+    "title": "Fettuccine Alfredo",
+    "description": "Ribbons of fettuccine coated in a velvety sauce made with butter, heavy cream and freshly grated parmesan, finished with a pinch of black pepper. It is a simple, comforting classic that comes together in the time it takes to boil the pasta, ideal for busy nights.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "300 g fettuccine",
+      "3 tbsp butter",
+      "1 cup heavy cream",
+      "1 cup grated parmesan",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Cook the fettuccine until al dente.",
+      "Melt the butter with the cream and simmer for 3 minutes.",
+      "Stir in the parmesan until melted.",
+      "Toss the pasta with the sauce and season with pepper."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 2,
+    "title": "Edamame Stir-Fry with Brown Rice",
+    "description": "Quick veggie stir-fry served over nutty brown rice.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "1 cup brown rice",
+      "1 1/2 cups shelled edamame",
+      "1 red bell pepper, sliced",
+      "1 cup snap peas",
+      "2 tbsp soy sauce",
+      "1 tbsp grated ginger",
+      "1 tbsp sesame oil"
+    ],
+    "cookingInstructions": [
+      "Cook the brown rice for 40 minutes.",
+      "Stir-fry the ginger, pepper and snap peas in the sesame oil for 3 minutes.",
+      "Add the edamame and soy sauce and cook for 2 more minutes.",
+      "Serve over the rice."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Neapolitan-Style Margherita Pizza with Fresh Mozzarella and Basil",
+    "description": "Thin and chewy crust topped with tomato, mozzarella and basil.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "250 g pizza dough",
+      "1/2 cup tomato sauce",
+      "125 g fresh mozzarella, torn",
+      "Fresh basil leaves",
+      "1 tbsp olive oil"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to its highest temperature with a tray inside.",
+      "Stretch the dough into a thin round.",
+      "Spread the tomato sauce and add the mozzarella.",
+      "Bake for 8 to 10 minutes, until the crust is golden.",
+      "Finish with basil and a drizzle of olive oil."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 4,
+    "title": "Shrimp Pad Thai",
+    "description": "Rice noodles stir-fried with shrimp, egg, peanuts and lime.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "200 g flat rice noodles",
+      "200 g shrimp, peeled",
+      "2 eggs",
+      "2 tbsp tamari (gluten-free soy sauce)",
+      "1 tbsp tamarind paste",
+      "1 tbsp brown sugar",
+      "1 cup bean sprouts",
+      "1/4 cup roasted peanuts",
+      "1 lime"
+    ],
+    "cookingInstructions": [
+      "Soak the noodles in hot water for 10 minutes and drain.",
+      "Mix the tamari, tamarind and sugar to make the sauce.",
+      "Stir-fry the shrimp for 2 minutes, push aside and scramble the eggs.",
+      "Add the noodles and sauce and toss for 2 minutes.",
+      "Finish with bean sprouts, peanuts and lime wedges."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Cauliflower Fried Rice",
+    "description": "A lighter fried rice made with grated cauliflower.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "1 head cauliflower, grated",
+      "2 eggs",
+      "1 cup peas and carrots",
+      "2 green onions, sliced",
+      "2 tbsp tamari (gluten-free soy sauce)",
+      "1 tbsp sesame oil"
+    ],
+    "cookingInstructions": [
+      "Heat the sesame oil and cook the peas and carrots for 3 minutes.",
+      "Push aside and scramble the eggs.",
+      "Add the cauliflower and tamari and stir-fry for 5 minutes.",
+      "Top with green onions."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Roasted Chickpea Snack",
+    "description": "Crunchy oven-roasted chickpeas with smoky spices.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "2 cans chickpeas, drained and dried",
+      "1 tbsp olive oil",
+      "1 tsp smoked paprika",
+      "1/2 tsp garlic powder"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 200°C.",
+      "Toss the chickpeas with the oil and spices.",
+      "Roast for 30 minutes, shaking the tray halfway.",
+      "Let them cool to get extra crunchy."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Spaghetti Carbonara",
+    "description": "Silky Roman-style pasta where hot spaghetti is tossed with crispy pancetta, eggs and plenty of grated pecorino until it turns into a glossy, creamy sauce without any cream at all. The secret is working off the heat so the eggs stay smooth instead of scrambling.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "200 g spaghetti",
+      "100 g pancetta, diced",
+      "2 eggs",
+      "1/2 cup grated pecorino",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Cook the spaghetti in salted boiling water until al dente.",
+      "Fry the pancetta in a pan until crispy.",
+      "Whisk the eggs with the pecorino and plenty of black pepper.",
+      "Toss the hot pasta with the pancetta, then remove from the heat and stir in the egg mixture.",
+      "Add a splash of pasta water to make it creamy and serve right away."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 8,
+    "title": "Whole Wheat Spaghetti Marinara",
+    "description": "Whole wheat pasta tossed in a simple homemade tomato and basil sauce.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "250 g whole wheat spaghetti",
+      "1 can (400 g) crushed tomatoes",
+      "3 garlic cloves, minced",
+      "2 tbsp olive oil",
+      "1 tsp dried oregano",
+      "Fresh basil leaves",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Cook the spaghetti in salted boiling water according to the package instructions.",
+      "Meanwhile, heat the olive oil and sauté the garlic for 1 minute.",
+      "Add the tomatoes and oregano and simmer for 15 minutes.",
+      "Season with salt and pepper.",
+      "Drain the pasta and toss it with the sauce.",
+      "Top with fresh basil."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Classic Smash Cheeseburger with Melted Cheddar, Crisp Lettuce and Toasted Buns",
+    "description": "Juicy beef patty with melted cheddar on a toasted bun.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 beef patties",
+      "2 slices cheddar",
+      "2 burger buns",
+      "Lettuce leaves",
+      "1 tomato, sliced",
+      "Ketchup and mustard"
+    ],
+    "cookingInstructions": [
+      "Season the patties with salt and pepper.",
+      "Grill them for 4 minutes per side.",
+      "Add the cheddar in the last minute so it melts.",
+      "Toast the buns and assemble the burgers with lettuce, tomato and sauces."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 10,
+    "title": "Homemade Whole Wheat Bread",
+    "description": "A soft and hearty loaf made with whole wheat flour and a touch of honey.",
+    "numberOfServings": 8,
+    "ingredients": [
+      "3 cups whole wheat flour",
+      "1 packet (7 g) dry yeast",
+      "1 1/4 cups warm water",
+      "2 tbsp honey",
+      "2 tbsp olive oil",
+      "1 tsp salt"
+    ],
+    "cookingInstructions": [
+      "Dissolve the yeast and honey in the warm water and let it rest for 10 minutes.",
+      "Add the flour, olive oil and salt and knead for 10 minutes until smooth.",
+      "Cover and let it rise for 1 hour.",
+      "Shape the dough into a loaf, place it in a greased pan and let it rise for 30 more minutes.",
+      "Bake at 190°C for 35 minutes.",
+      "Let it cool before slicing."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Lemon Chicken",
+    "description": "Juicy chicken breasts lightly dredged in flour and pan-seared until golden, then finished in a glossy butter sauce with fresh lemon, garlic, rosemary and thyme. It is a bright and comforting weeknight dinner that pairs perfectly with mashed potatoes, rice or a simple green salad.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "4 chicken breasts",
+      "1/3 cup all-purpose flour",
+      "Juice and zest of 2 lemons",
+      "3 garlic cloves, minced",
+      "2 tbsp olive oil",
+      "3 tbsp butter",
+      "1 tsp dried rosemary",
+      "1 tsp dried thyme",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Season the chicken with salt, pepper, rosemary and thyme, then dredge it in the flour.",
+      "Heat the olive oil in a pan and cook the chicken for 6 minutes per side.",
+      "Add the butter, garlic, lemon juice and zest and cook for 2 more minutes, spooning the sauce over the chicken.",
+      "Let it rest for 5 minutes before slicing."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 12,
+    "title": "Rustic Garden Vegetable Soup with Fresh Thyme, Potatoes and Zucchini",
+    "description": "A comforting soup packed with seasonal vegetables and fresh herbs.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "2 carrots, diced",
+      "2 celery stalks, diced",
+      "1 onion, chopped",
+      "2 potatoes, cubed",
+      "1 zucchini, diced",
+      "2 garlic cloves, minced",
+      "1.5 l low-sodium vegetable broth",
+      "1 tbsp olive oil",
+      "1 tsp dried thyme",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Heat the olive oil in a large pot and sauté the onion and garlic for 3 minutes.",
+      "Add the carrots, celery and potatoes and cook for 5 minutes.",
+      "Pour in the broth, add the thyme and bring to a boil.",
+      "Lower the heat and simmer for 20 minutes.",
+      "Add the zucchini and cook for 5 more minutes.",
+      "Season with black pepper and serve."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Banana Oat Cookies",
+    "description": "Soft two-ingredient cookies sweetened only with banana.",
+    "numberOfServings": 12,
+    "ingredients": [
+      "2 ripe bananas",
+      "1 1/2 cups rolled oats",
+      "1/4 cup raisins",
+      "1/2 tsp cinnamon"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 180°C.",
+      "Mash the bananas and mix with the oats, raisins and cinnamon.",
+      "Scoop onto a lined tray and flatten slightly.",
+      "Bake for 15 minutes."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "French Onion Soup",
+    "description": "Deeply caramelized onions simmered in a savory beef broth, then topped with a toasted slice of baguette and a generous layer of melted gruyère. It takes a little patience to brown the onions properly, but the sweet and rich flavor is completely worth the wait on a cold day.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "6 onions, thinly sliced",
+      "3 tbsp butter",
+      "1 tbsp flour",
+      "1/2 cup dry white wine",
+      "1.5 l beef broth",
+      "4 slices baguette",
+      "150 g gruyère, grated"
+    ],
+    "cookingInstructions": [
+      "Melt the butter and cook the onions over low heat for 40 minutes, until deep golden.",
+      "Stir in the flour and cook for 1 minute.",
+      "Add the wine, then the broth, and simmer for 20 minutes.",
+      "Pour into oven-safe bowls and top with the baguette and gruyère.",
+      "Broil for 3 minutes, until the cheese is bubbly."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 15,
+    "title": "Rainbow Avocado Power Bowl with Baby Spinach, Red Cabbage and Tahini Dressing",
+    "description": "A colorful bowl with avocado, leafy greens, seeds and a tahini dressing.",
+    "numberOfServings": 1,
+    "ingredients": [
+      "1 avocado, sliced",
+      "1 cup baby spinach",
+      "1/2 cucumber, sliced",
+      "1/4 cup shredded red cabbage",
+      "1 tbsp pumpkin seeds",
+      "1 tbsp tahini",
+      "1 tsp lemon juice",
+      "1 tbsp water"
+    ],
+    "cookingInstructions": [
+      "Arrange the spinach in a bowl.",
+      "Top with the avocado, cucumber and red cabbage.",
+      "Mix the tahini, lemon juice and water until smooth.",
+      "Drizzle the dressing over the bowl and sprinkle with pumpkin seeds."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Panko-Crusted Salmon",
+    "description": "Salmon fillets with a crunchy panko and parmesan crust, served with asparagus.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 salmon fillets",
+      "1 bunch asparagus",
+      "1/2 cup panko breadcrumbs",
+      "1/4 cup grated parmesan",
+      "2 tbsp melted butter",
+      "Juice of 1 lemon",
+      "1 tsp dried dill",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 200°C.",
+      "Mix the panko, parmesan, melted butter and dill.",
+      "Season the salmon with lemon juice, salt and pepper and press the crumb mixture on top.",
+      "Bake the salmon and asparagus on the same tray for 12 to 15 minutes.",
+      "Serve together."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 17,
+    "title": "Cucumber Gazpacho",
+    "description": "A chilled green soup blended from crisp cucumbers, green pepper, fresh herbs and a touch of garlic, finished with a drizzle of good olive oil. It needs no cooking at all, which makes it perfect for hot summer days when you want something refreshing, light and ready in minutes.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "3 cucumbers, chopped",
+      "1 green bell pepper, chopped",
+      "1 garlic clove",
+      "1/2 cup fresh mint and dill",
+      "2 tbsp white wine vinegar",
+      "2 tbsp olive oil",
+      "1 cup cold water"
+    ],
+    "cookingInstructions": [
+      "Add all the ingredients to a blender.",
+      "Blend until very smooth.",
+      "Chill for at least 2 hours.",
+      "Serve cold with a drizzle of olive oil."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Crispy Fish Tacos",
+    "description": "Flour tortillas with crispy beer-battered cod, crunchy slaw and sour cream.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "400 g cod fillets",
+      "8 flour tortillas",
+      "1/2 cup all-purpose flour",
+      "1/2 cup beer",
+      "2 cups shredded cabbage",
+      "1/3 cup sour cream",
+      "Juice of 1 lime",
+      "1 tsp chili powder"
+    ],
+    "cookingInstructions": [
+      "Whisk the flour, beer and chili powder into a batter.",
+      "Dip the cod in the batter and pan-fry for 3 minutes per side until crispy.",
+      "Mix the sour cream with lime juice and toss half with the cabbage.",
+      "Fill the warm tortillas with fish and slaw and drizzle with the remaining sauce."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 19,
+    "title": "Roasted Pumpkin",
+    "description": "Caramelized pumpkin wedges roasted with olive oil, smoked paprika and a pinch of cinnamon until the edges turn golden and slightly crispy. Finished with fresh thyme, they make a cozy autumn side dish that goes well with grains, salads or a simple roast.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "1 small pumpkin, cut into wedges",
+      "2 tbsp olive oil",
+      "1 tsp smoked paprika",
+      "1/2 tsp cinnamon",
+      "Fresh thyme",
+      "Black pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 200°C.",
+      "Toss the pumpkin wedges with the olive oil, paprika, cinnamon and pepper.",
+      "Spread them on a baking sheet in a single layer.",
+      "Roast for 30 to 35 minutes, turning halfway through.",
+      "Sprinkle with fresh thyme and serve."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Overnight Mixed Berry Chia Pudding with Coconut Yogurt and Toasted Almonds",
+    "description": "A make-ahead breakfast that sets in the fridge overnight.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "1/3 cup chia seeds",
+      "1 1/2 cups almond milk",
+      "1 tbsp maple syrup",
+      "1/2 cup coconut yogurt",
+      "1 cup mixed berries",
+      "2 tbsp toasted almonds"
+    ],
+    "cookingInstructions": [
+      "Whisk the chia seeds, almond milk and maple syrup.",
+      "Refrigerate overnight.",
+      "Top with coconut yogurt, berries and almonds before serving."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Fluffy Buttermilk Pancakes",
+    "description": "Tall, soft pancakes for a classic weekend breakfast.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "2 tbsp sugar",
+      "2 tsp baking powder",
+      "2 cups buttermilk",
+      "2 eggs",
+      "3 tbsp melted butter"
+    ],
+    "cookingInstructions": [
+      "Whisk the dry ingredients in a bowl.",
+      "Whisk the buttermilk, eggs and butter in another bowl.",
+      "Combine without overmixing.",
+      "Cook 1/4 cup of batter per pancake for 2 minutes per side."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 22,
+    "title": "Hearty Barley and Wild Mushroom Soup with Fresh Thyme and Root Vegetables",
+    "description": "A warming whole-grain soup full of earthy flavors.",
+    "numberOfServings": 6,
+    "ingredients": [
+      "1 cup hulled barley",
+      "300 g mixed mushrooms, sliced",
+      "2 carrots, diced",
+      "1 parsnip, diced",
+      "1 onion, chopped",
+      "2 l low-sodium vegetable broth",
+      "Fresh thyme",
+      "1 tbsp olive oil"
+    ],
+    "cookingInstructions": [
+      "Sauté the onion, carrots and parsnip in the olive oil for 5 minutes.",
+      "Add the mushrooms and cook for 5 more minutes.",
+      "Add the barley, broth and thyme.",
+      "Simmer for 45 minutes, until the barley is tender."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Tomato Basil Bruschetta",
+    "description": "Toasted whole wheat bread topped with fresh tomatoes.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "1 whole wheat baguette, sliced",
+      "4 tomatoes, diced",
+      "1 garlic clove",
+      "Fresh basil leaves",
+      "2 tbsp olive oil"
+    ],
+    "cookingInstructions": [
+      "Toast the bread slices until golden.",
+      "Rub each slice with the garlic clove.",
+      "Mix the tomatoes, basil and olive oil.",
+      "Spoon the mixture over the bread and serve."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Chicken Caesar Salad",
+    "description": "Crisp romaine lettuce tossed with juicy grilled chicken, crunchy garlic croutons and shaved parmesan, all coated in a tangy homemade Caesar dressing. It is hearty enough to be a full meal and a great option for a quick lunch that still feels a little special.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 chicken breasts",
+      "1 head romaine lettuce, chopped",
+      "1 cup croutons",
+      "1/3 cup shaved parmesan",
+      "3 tbsp mayonnaise",
+      "1 tsp Dijon mustard",
+      "1 garlic clove, grated",
+      "Juice of 1/2 lemon"
+    ],
+    "cookingInstructions": [
+      "Grill the chicken for 6 minutes per side, then slice it.",
+      "Whisk the mayonnaise, mustard, garlic and lemon juice to make the dressing.",
+      "Toss the lettuce with the dressing.",
+      "Top with the chicken, croutons and parmesan."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 25,
+    "title": "Greek Yogurt Parfait",
+    "description": "Layers of yogurt, oat granola and fresh berries.",
+    "numberOfServings": 1,
+    "ingredients": [
+      "3/4 cup Greek yogurt",
+      "1/3 cup whole grain oat granola",
+      "1/2 cup mixed berries",
+      "1 tsp honey"
+    ],
+    "cookingInstructions": [
+      "Spoon half of the yogurt into a glass.",
+      "Add half of the granola and berries.",
+      "Repeat the layers and drizzle with honey."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Apple Pie",
+    "description": "A classic apple pie with a flaky homemade crust and a generous filling of tender apples tossed with cinnamon, sugar and a squeeze of lemon. It is baked until golden and bubbling, and tastes even better served slightly warm with a scoop of your favorite dairy-free ice cream.",
+    "numberOfServings": 8,
+    "ingredients": [
+      "2 1/2 cups all-purpose flour",
+      "1 cup cold vegan butter",
+      "6 tbsp cold water",
+      "6 apples, peeled and sliced",
+      "1/2 cup sugar",
+      "1 tbsp lemon juice",
+      "2 tsp cinnamon",
+      "2 tbsp cornstarch"
+    ],
+    "cookingInstructions": [
+      "Mix the flour with the vegan butter until crumbly, then add the water and form a dough.",
+      "Chill for 30 minutes.",
+      "Toss the apples with the sugar, lemon juice, cinnamon and cornstarch.",
+      "Roll out half of the dough into a pie dish and add the filling.",
+      "Cover with the remaining dough and cut a few slits on top.",
+      "Bake at 200°C for 45 minutes, until golden."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Brown Rice with Broccoli",
+    "description": "A simple and wholesome side dish with brown rice, broccoli and garlic.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "1 cup brown rice",
+      "2 cups broccoli florets",
+      "2 garlic cloves, minced",
+      "1 tbsp olive oil",
+      "2 cups water",
+      "1 tsp lemon zest"
+    ],
+    "cookingInstructions": [
+      "Rinse the rice and cook it in the water over low heat, covered, for 40 minutes.",
+      "Steam the broccoli for 5 minutes.",
+      "Heat the olive oil and sauté the garlic for 1 minute.",
+      "Add the cooked rice and broccoli to the pan and toss well.",
+      "Finish with lemon zest."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Spiralized Zucchini Noodles with Fresh Basil Pesto, Toasted Pine Nuts and Cherry Tomatoes",
+    "description": "A fresh, low-carb alternative to pasta with vegan pesto.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "3 zucchinis, spiralized",
+      "2 cups fresh basil",
+      "1/4 cup pine nuts",
+      "1 garlic clove",
+      "1/4 cup olive oil",
+      "2 tbsp nutritional yeast",
+      "1 cup cherry tomatoes, halved"
+    ],
+    "cookingInstructions": [
+      "Blend the basil, half of the pine nuts, garlic, olive oil and nutritional yeast into a pesto.",
+      "Toast the remaining pine nuts in a dry pan.",
+      "Sauté the zucchini noodles for 2 minutes.",
+      "Toss with the pesto and tomatoes and top with the pine nuts."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Baked Sweet Potato Fries",
+    "description": "Crispy on the outside and soft in the middle, these oven-baked sweet potato fries are tossed in olive oil and smoked paprika for a little warmth. They are a much lighter alternative to deep-fried fries and pair perfectly with burgers, sandwiches or a simple dipping sauce.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "2 sweet potatoes, cut into sticks",
+      "2 tbsp olive oil",
+      "1 tsp smoked paprika",
+      "1 tbsp cornstarch",
+      "Salt to taste"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 220°C.",
+      "Toss the sweet potatoes with the cornstarch, oil and paprika.",
+      "Spread them on a tray without overlapping.",
+      "Bake for 25 minutes, flipping halfway.",
+      "Season with salt and serve."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Creamy Oat Milk Porridge with Sliced Banana, Toasted Walnuts and Maple Syrup",
+    "description": "A creamy bowl of oats topped with fruit and a drizzle of maple syrup.",
+    "numberOfServings": 1,
+    "ingredients": [
+      "1/2 cup rolled oats",
+      "1 cup oat milk",
+      "1/2 banana, sliced",
+      "1 tbsp maple syrup",
+      "1 tbsp chopped walnuts",
+      "1 pinch cinnamon"
+    ],
+    "cookingInstructions": [
+      "Bring the oat milk to a simmer in a small pot.",
+      "Add the oats and cook for 5 minutes, stirring often, until creamy.",
+      "Pour into a bowl and top with banana, walnuts, cinnamon and maple syrup."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Strawberry Smoothie",
+    "description": "A thick and refreshing smoothie blended from frozen strawberries, ripe banana and unsweetened almond milk, with a spoonful of chia seeds for extra fiber. It takes less than five minutes to make and works as a quick breakfast, a light snack or a cool treat on hot afternoons.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 cups frozen strawberries",
+      "1 banana",
+      "1 cup unsweetened almond milk",
+      "1 tbsp chia seeds",
+      "4 ice cubes"
+    ],
+    "cookingInstructions": [
+      "Add all the ingredients to a blender.",
+      "Blend on high speed for 1 minute until smooth.",
+      "Pour into glasses and serve immediately."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Blueberry Muffins",
+    "description": "Moist whole wheat muffins bursting with fresh blueberries.",
+    "numberOfServings": 12,
+    "ingredients": [
+      "2 cups whole wheat flour",
+      "1 cup fresh blueberries",
+      "2 eggs",
+      "1/2 cup honey",
+      "1/2 cup plain yogurt",
+      "1/3 cup vegetable oil",
+      "2 tsp baking powder",
+      "1 tsp vanilla extract"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 180°C and line a muffin tin.",
+      "Mix the flour and baking powder in a bowl.",
+      "In another bowl, whisk the eggs, honey, yogurt, oil and vanilla.",
+      "Combine the wet and dry ingredients without overmixing.",
+      "Fold in the blueberries.",
+      "Fill the muffin cups and bake for 20 to 22 minutes."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      },
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Grilled Ribeye Steak with Fresh Herb Chimichurri and Charred Lemon",
+    "description": "Butter-basted steak with a bright parsley sauce and garlic bread.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 ribeye steaks",
+      "2 tbsp butter",
+      "1 cup parsley, chopped",
+      "2 garlic cloves, minced",
+      "1/3 cup olive oil",
+      "2 tbsp red wine vinegar",
+      "1 lemon, halved",
+      "4 slices garlic bread",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Mix the parsley, garlic, olive oil and vinegar to make the chimichurri.",
+      "Season the steaks and grill for 4 to 5 minutes per side, basting with the butter.",
+      "Grill the lemon halves cut side down and toast the garlic bread.",
+      "Rest the steaks for 5 minutes and serve with the chimichurri, lemon and garlic bread."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 34,
+    "title": "Mushroom Risotto",
+    "description": "Creamy arborio rice slowly cooked with golden mushrooms, a splash of dry white wine and plenty of parmesan. Each ladle of warm broth is stirred in patiently until the rice turns silky and tender, making it a cozy dinner for chilly evenings or a special weekend meal.",
+    "numberOfServings": 3,
+    "ingredients": [
+      "1 cup arborio rice",
+      "250 g mushrooms, sliced",
+      "1 shallot, finely chopped",
+      "2 garlic cloves, minced",
+      "1/2 cup dry white wine",
+      "1 l hot vegetable broth",
+      "2 tbsp butter",
+      "1/2 cup grated parmesan",
+      "Salt and pepper to taste"
+    ],
+    "cookingInstructions": [
+      "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
+      "In the same pan, sauté the shallot and garlic.",
+      "Add the rice and toast for 2 minutes.",
+      "Pour in the wine and stir until absorbed.",
+      "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
+      "Stir in the mushrooms, the remaining butter and the parmesan.",
+      "Season and serve immediately."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Creamy Beef Stroganoff with Mushrooms, Caramelized Onions and Buttered Egg Noodles",
+    "description": "Tender beef strips in a rich sour cream and mushroom sauce.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "500 g beef sirloin, sliced into strips",
+      "250 g mushrooms, sliced",
+      "1 onion, sliced",
+      "2 tbsp butter",
+      "1 tbsp flour",
+      "1 cup beef broth",
+      "1/2 cup sour cream",
+      "300 g egg noodles"
+    ],
+    "cookingInstructions": [
+      "Sear the beef in batches and set aside.",
+      "Cook the onion and mushrooms in the butter until golden.",
+      "Stir in the flour, then the broth, and simmer for 5 minutes.",
+      "Return the beef and stir in the sour cream.",
+      "Serve over the cooked egg noodles."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 36,
+    "title": "Caprese Salad",
+    "description": "Fresh mozzarella, ripe tomatoes and basil with olive oil.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "2 large tomatoes, sliced",
+      "200 g fresh mozzarella, sliced",
+      "Fresh basil leaves",
+      "2 tbsp olive oil",
+      "1 tbsp balsamic glaze"
+    ],
+    "cookingInstructions": [
+      "Alternate the tomato and mozzarella slices on a plate.",
+      "Tuck basil leaves in between.",
+      "Drizzle with olive oil and balsamic glaze."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Creamy Red Lentil Coconut Curry with Ginger, Turmeric and Fresh Cilantro",
+    "description": "A warming curry with red lentils, coconut milk and aromatic spices.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "1 cup red lentils, rinsed",
+      "1 can (400 ml) coconut milk",
+      "1 can diced tomatoes",
+      "1 onion, chopped",
+      "3 garlic cloves, minced",
+      "1 tbsp grated ginger",
+      "2 tbsp curry powder",
+      "1 tsp turmeric",
+      "2 cups water",
+      "1 tbsp coconut oil",
+      "Fresh cilantro to serve"
+    ],
+    "cookingInstructions": [
+      "Heat the coconut oil and sauté the onion, garlic and ginger for 5 minutes.",
+      "Add the curry powder and turmeric and cook for 1 minute.",
+      "Stir in the lentils, tomatoes, coconut milk and water.",
+      "Simmer for 20 to 25 minutes, stirring often, until the lentils are soft.",
+      "Garnish with cilantro and serve with rice."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 38,
     "title": "Banana Pancakes",
     "description": "Fluffy pancakes made with ripe bananas and oat flour, perfect for a light breakfast.",
     "numberOfServings": 2,
@@ -37,87 +1324,93 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Vegetable Soup",
-    "description": "A comforting soup packed with seasonal vegetables and fresh herbs.",
+    "id": 39,
+    "title": "Thai Green Curry with Crispy Tofu, Bamboo Shoots and Fragrant Jasmine Rice",
+    "description": "Creamy coconut curry with tofu and vegetables.",
     "numberOfServings": 4,
     "ingredients": [
-      "2 carrots, diced",
-      "2 celery stalks, diced",
-      "1 onion, chopped",
-      "2 potatoes, cubed",
-      "1 zucchini, diced",
-      "2 garlic cloves, minced",
-      "1.5 l low-sodium vegetable broth",
-      "1 tbsp olive oil",
-      "1 tsp dried thyme",
-      "Black pepper to taste"
+      "400 g firm tofu, cubed",
+      "1 can (400 ml) coconut milk",
+      "3 tbsp green curry paste",
+      "1 cup bamboo shoots",
+      "1 red bell pepper, sliced",
+      "1 cup jasmine rice",
+      "Fresh Thai basil"
     ],
     "cookingInstructions": [
-      "Heat the olive oil in a large pot and sauté the onion and garlic for 3 minutes.",
-      "Add the carrots, celery and potatoes and cook for 5 minutes.",
-      "Pour in the broth, add the thyme and bring to a boil.",
-      "Lower the heat and simmer for 20 minutes.",
-      "Add the zucchini and cook for 5 more minutes.",
-      "Season with black pepper and serve."
+      "Cook the rice according to the package.",
+      "Pan-fry the tofu until crispy and set aside.",
+      "Fry the curry paste for 1 minute, then add the coconut milk.",
+      "Add the bamboo shoots and pepper and simmer for 10 minutes.",
+      "Stir in the tofu and basil and serve with the rice."
     ],
     "dietaryAttributes": [
       {
         "id": 1,
-        "name": "Vegan",
+        "name": "Vegetarian",
         "backgroundColor": 4293787637,
         "contentColor": 4278210850
       },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
-      },
-      {
-        "id": 5,
-        "name": "Low-calorie",
-        "backgroundColor": 4294965723,
-        "contentColor": 4285223680
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Mushroom Risotto",
-    "description": "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
-    "numberOfServings": 3,
-    "ingredients": [
-      "1 cup arborio rice",
-      "250 g mushrooms, sliced",
-      "1 shallot, finely chopped",
-      "2 garlic cloves, minced",
-      "1/2 cup dry white wine",
-      "1 l hot vegetable broth",
-      "2 tbsp butter",
-      "1/2 cup grated parmesan",
-      "Salt and pepper to taste"
-    ],
-    "cookingInstructions": [
-      "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
-      "In the same pan, sauté the shallot and garlic.",
-      "Add the rice and toast for 2 minutes.",
-      "Pour in the wine and stir until absorbed.",
-      "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
-      "Stir in the mushrooms, the remaining butter and the parmesan.",
-      "Season and serve immediately."
-    ],
-    "dietaryAttributes": [
       {
         "id": 2,
         "name": "Gluten-free",
         "backgroundColor": 4294831848,
         "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
       }
     ]
   },
   {
-    "id": 4,
+    "id": 40,
+    "title": "Black Bean Tacos",
+    "description": "Warm corn tortillas filled with smoky spiced black beans, a bright homemade tomato and lime salsa and creamy avocado slices. They come together in about twenty minutes, work great for a casual weeknight dinner and are easy to customize with your favorite toppings.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "8 corn tortillas",
+      "2 cans black beans, drained",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "2 tomatoes, diced",
+      "1/2 red onion, diced",
+      "1 avocado, sliced",
+      "Juice of 1 lime",
+      "Fresh cilantro"
+    ],
+    "cookingInstructions": [
+      "Warm the black beans in a pan with the cumin and paprika for 5 minutes, mashing them lightly.",
+      "Mix the tomatoes, onion, cilantro and lime juice to make the salsa.",
+      "Heat the tortillas in a dry pan.",
+      "Fill each tortilla with beans, salsa and avocado slices.",
+      "Serve right away."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 41,
     "title": "Chickpea Salad",
     "description": "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
     "numberOfServings": 2,
@@ -140,7 +1433,7 @@
     "dietaryAttributes": [
       {
         "id": 1,
-        "name": "Vegan",
+        "name": "Vegetarian",
         "backgroundColor": 4293787637,
         "contentColor": 4278210850
       },
@@ -159,30 +1452,30 @@
     ]
   },
   {
-    "id": 5,
-    "title": "Avocado Bowl",
-    "description": "A colorful bowl with avocado, leafy greens, seeds and a tahini dressing.",
-    "numberOfServings": 1,
+    "id": 42,
+    "title": "Quinoa Tabbouleh",
+    "description": "A light and zesty twist on the classic Middle Eastern salad, made with fluffy quinoa instead of bulgur and loaded with fresh parsley, mint, juicy tomatoes and crunchy cucumber. The lemon and olive oil dressing keeps it bright, and it tastes even better after resting in the fridge for an hour.",
+    "numberOfServings": 4,
     "ingredients": [
-      "1 avocado, sliced",
-      "1 cup baby spinach",
-      "1/2 cucumber, sliced",
-      "1/4 cup shredded red cabbage",
-      "1 tbsp pumpkin seeds",
-      "1 tbsp tahini",
-      "1 tsp lemon juice",
-      "1 tbsp water"
+      "1 cup quinoa, rinsed",
+      "2 cups water",
+      "2 cups chopped parsley",
+      "1/2 cup chopped mint",
+      "2 tomatoes, diced",
+      "1 cucumber, diced",
+      "Juice of 2 lemons",
+      "3 tbsp olive oil"
     ],
     "cookingInstructions": [
-      "Arrange the spinach in a bowl.",
-      "Top with the avocado, cucumber and red cabbage.",
-      "Mix the tahini, lemon juice and water until smooth.",
-      "Drizzle the dressing over the bowl and sprinkle with pumpkin seeds."
+      "Cook the quinoa in the water for 15 minutes and let it cool.",
+      "Mix the quinoa with the herbs, tomatoes and cucumber.",
+      "Whisk the lemon juice and olive oil and pour over the salad.",
+      "Chill for 1 hour before serving."
     ],
     "dietaryAttributes": [
       {
         "id": 1,
-        "name": "Vegan",
+        "name": "Vegetarian",
         "backgroundColor": 4293787637,
         "contentColor": 4278210850
       },
@@ -193,51 +1486,89 @@
         "contentColor": 4287249178
       },
       {
-        "id": 7,
-        "name": "Low-carb",
-        "backgroundColor": 4294176255,
-        "contentColor": 4283116170
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Homemade Whole Wheat Bread",
-    "description": "A soft and hearty loaf made with whole wheat flour and a touch of honey.",
-    "numberOfServings": 8,
-    "ingredients": [
-      "3 cups whole wheat flour",
-      "1 packet (7 g) dry yeast",
-      "1 1/4 cups warm water",
-      "2 tbsp honey",
-      "2 tbsp olive oil",
-      "1 tsp salt"
-    ],
-    "cookingInstructions": [
-      "Dissolve the yeast and honey in the warm water and let it rest for 10 minutes.",
-      "Add the flour, olive oil and salt and knead for 10 minutes until smooth.",
-      "Cover and let it rise for 1 hour.",
-      "Shape the dough into a loaf, place it in a greased pan and let it rise for 30 more minutes.",
-      "Bake at 190°C for 35 minutes.",
-      "Let it cool before slicing."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 6,
-        "name": "Whole grain",
-        "backgroundColor": 4294175458,
-        "contentColor": 4284234270
-      },
-      {
         "id": 3,
         "name": "Lactose-free",
         "backgroundColor": 4294243831,
         "contentColor": 4282336848
+      },
+      {
+        "id": 5,
+        "name": "Low-calorie",
+        "backgroundColor": 4294965723,
+        "contentColor": 4285223680
       }
     ]
   },
   {
-    "id": 7,
+    "id": 43,
+    "title": "Classic Beef Lasagna with Ricotta, Fresh Basil and Slow-Simmered Tomato Ragù",
+    "description": "Layers of pasta, rich meat sauce and creamy ricotta baked until bubbly.",
+    "numberOfServings": 8,
+    "ingredients": [
+      "12 lasagna sheets",
+      "500 g ground beef",
+      "1 onion, chopped",
+      "2 garlic cloves, minced",
+      "700 g tomato passata",
+      "250 g ricotta",
+      "200 g mozzarella, shredded",
+      "1/2 cup grated parmesan",
+      "Fresh basil leaves"
+    ],
+    "cookingInstructions": [
+      "Brown the beef with the onion and garlic.",
+      "Add the passata and simmer for 30 minutes.",
+      "Mix the ricotta with half of the parmesan and the basil.",
+      "Layer pasta, sauce, ricotta and mozzarella in a baking dish, repeating three times.",
+      "Top with the remaining parmesan and bake at 180°C for 40 minutes.",
+      "Let it rest for 10 minutes before slicing."
+    ],
+    "dietaryAttributes": []
+  },
+  {
+    "id": 44,
+    "title": "Stuffed Bell Peppers",
+    "description": "Colorful bell peppers filled with a hearty mix of brown rice, black beans, sweet corn and tomatoes, seasoned with cumin and smoked paprika, then baked until tender. They make a filling plant-based dinner and can be prepared ahead of time and reheated during the week.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "4 bell peppers, tops cut off",
+      "1 cup cooked brown rice",
+      "1 can black beans, drained",
+      "1 cup corn",
+      "1 can diced tomatoes",
+      "1 tsp cumin",
+      "1 tsp smoked paprika"
+    ],
+    "cookingInstructions": [
+      "Preheat the oven to 190°C.",
+      "Mix the rice, beans, corn, tomatoes and spices.",
+      "Fill the peppers and place them in a baking dish.",
+      "Cover with foil and bake for 35 minutes.",
+      "Uncover and bake for 10 more minutes."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 6,
+        "name": "Whole-grain",
+        "backgroundColor": 4294175458,
+        "contentColor": 4284234270
+      }
+    ]
+  },
+  {
+    "id": 45,
     "title": "Spinach Omelette",
     "description": "A quick and nutritious omelette filled with fresh spinach and herbs.",
     "numberOfServings": 1,
@@ -277,191 +1608,25 @@
     ]
   },
   {
-    "id": 8,
-    "title": "Lentil Curry",
-    "description": "A warming curry with red lentils, coconut milk and aromatic spices.",
+    "id": 46,
+    "title": "Turkey Meatballs in Tomato Sauce",
+    "description": "Tender turkey meatballs made with almond flour instead of breadcrumbs, gently simmered in a garlicky tomato sauce with fresh herbs. They are lighter than classic beef meatballs, freeze really well and can be served over zucchini noodles, rice or simply with a fresh green salad.",
     "numberOfServings": 4,
     "ingredients": [
-      "1 cup red lentils, rinsed",
-      "1 can (400 ml) coconut milk",
-      "1 can diced tomatoes",
-      "1 onion, chopped",
-      "3 garlic cloves, minced",
-      "1 tbsp grated ginger",
-      "2 tbsp curry powder",
-      "1 tsp turmeric",
-      "2 cups water",
-      "1 tbsp coconut oil",
-      "Fresh cilantro to serve"
-    ],
-    "cookingInstructions": [
-      "Heat the coconut oil and sauté the onion, garlic and ginger for 5 minutes.",
-      "Add the curry powder and turmeric and cook for 1 minute.",
-      "Stir in the lentils, tomatoes, coconut milk and water.",
-      "Simmer for 20 to 25 minutes, stirring often, until the lentils are soft.",
-      "Garnish with cilantro and serve with rice."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 3,
-        "name": "Lactose-free",
-        "backgroundColor": 4294243831,
-        "contentColor": 4282336848
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Strawberry Smoothie",
-    "description": "A refreshing smoothie with strawberries, banana and almond milk.",
-    "numberOfServings": 2,
-    "ingredients": [
-      "2 cups frozen strawberries",
-      "1 banana",
-      "1 cup unsweetened almond milk",
-      "1 tbsp chia seeds",
-      "4 ice cubes"
-    ],
-    "cookingInstructions": [
-      "Add all the ingredients to a blender.",
-      "Blend on high speed for 1 minute until smooth.",
-      "Pour into glasses and serve immediately."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 5,
-        "name": "Low-calorie",
-        "backgroundColor": 4294965723,
-        "contentColor": 4285223680
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "title": "Whole Wheat Spaghetti Marinara",
-    "description": "Whole wheat pasta tossed in a simple homemade tomato and basil sauce.",
-    "numberOfServings": 3,
-    "ingredients": [
-      "250 g whole wheat spaghetti",
-      "1 can (400 g) crushed tomatoes",
-      "3 garlic cloves, minced",
-      "2 tbsp olive oil",
+      "500 g ground turkey",
+      "1/3 cup almond flour",
+      "1 egg",
+      "2 garlic cloves, minced",
+      "700 g tomato passata",
       "1 tsp dried oregano",
-      "Fresh basil leaves",
-      "Salt and pepper to taste"
+      "Fresh parsley"
     ],
     "cookingInstructions": [
-      "Cook the spaghetti in salted boiling water according to the package instructions.",
-      "Meanwhile, heat the olive oil and sauté the garlic for 1 minute.",
-      "Add the tomatoes and oregano and simmer for 15 minutes.",
-      "Season with salt and pepper.",
-      "Drain the pasta and toss it with the sauce.",
-      "Top with fresh basil."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 6,
-        "name": "Whole grain",
-        "backgroundColor": 4294175458,
-        "contentColor": 4284234270
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Black Bean Tacos",
-    "description": "Corn tortillas filled with spiced black beans, fresh salsa and avocado.",
-    "numberOfServings": 4,
-    "ingredients": [
-      "8 corn tortillas",
-      "2 cans black beans, drained",
-      "1 tsp cumin",
-      "1 tsp smoked paprika",
-      "2 tomatoes, diced",
-      "1/2 red onion, diced",
-      "1 avocado, sliced",
-      "Juice of 1 lime",
-      "Fresh cilantro"
-    ],
-    "cookingInstructions": [
-      "Warm the black beans in a pan with the cumin and paprika for 5 minutes, mashing them lightly.",
-      "Mix the tomatoes, onion, cilantro and lime juice to make the salsa.",
-      "Heat the tortillas in a dry pan.",
-      "Fill each tortilla with beans, salsa and avocado slices.",
-      "Serve right away."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 3,
-        "name": "Lactose-free",
-        "backgroundColor": 4294243831,
-        "contentColor": 4282336848
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "title": "Grilled Salmon",
-    "description": "Tender salmon fillets with a lemon and herb marinade, served with asparagus.",
-    "numberOfServings": 2,
-    "ingredients": [
-      "2 salmon fillets",
-      "1 bunch asparagus",
-      "2 tbsp olive oil",
-      "Juice of 1 lemon",
-      "2 garlic cloves, minced",
-      "1 tsp dried dill",
-      "Salt and pepper to taste"
-    ],
-    "cookingInstructions": [
-      "Mix the olive oil, lemon juice, garlic, dill, salt and pepper.",
-      "Coat the salmon with the marinade and let it rest for 15 minutes.",
-      "Preheat a grill pan over medium-high heat.",
-      "Grill the salmon for 4 minutes per side.",
-      "Grill the asparagus for 5 minutes, turning occasionally.",
-      "Serve together."
+      "Mix the turkey, almond flour, egg and half of the garlic and shape into small balls.",
+      "Brown the meatballs in a pan on all sides.",
+      "Add the passata, oregano and remaining garlic.",
+      "Simmer covered for 20 minutes.",
+      "Sprinkle with parsley and serve."
     ],
     "dietaryAttributes": [
       {
@@ -485,294 +1650,32 @@
     ]
   },
   {
-    "id": 13,
-    "title": "Blueberry Muffins",
-    "description": "Moist whole wheat muffins bursting with fresh blueberries.",
-    "numberOfServings": 12,
+    "id": 47,
+    "title": "Brown Butter Chocolate Chip Cookies with Flaky Sea Salt and Toasted Pecans",
+    "description": "Chewy cookies with nutty brown butter and pools of chocolate.",
+    "numberOfServings": 24,
     "ingredients": [
-      "2 cups whole wheat flour",
-      "1 cup fresh blueberries",
-      "2 eggs",
-      "1/2 cup honey",
-      "1/2 cup plain yogurt",
-      "1/3 cup vegetable oil",
-      "2 tsp baking powder",
-      "1 tsp vanilla extract"
-    ],
-    "cookingInstructions": [
-      "Preheat the oven to 180°C and line a muffin tin.",
-      "Mix the flour and baking powder in a bowl.",
-      "In another bowl, whisk the eggs, honey, yogurt, oil and vanilla.",
-      "Combine the wet and dry ingredients without overmixing.",
-      "Fold in the blueberries.",
-      "Fill the muffin cups and bake for 20 to 22 minutes."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 6,
-        "name": "Whole grain",
-        "backgroundColor": 4294175458,
-        "contentColor": 4284234270
-      },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "title": "Brown Rice with Broccoli",
-    "description": "A simple and wholesome side dish with brown rice, broccoli and garlic.",
-    "numberOfServings": 3,
-    "ingredients": [
-      "1 cup brown rice",
-      "2 cups broccoli florets",
-      "2 garlic cloves, minced",
-      "1 tbsp olive oil",
-      "2 cups water",
-      "1 tsp lemon zest"
-    ],
-    "cookingInstructions": [
-      "Rinse the rice and cook it in the water over low heat, covered, for 40 minutes.",
-      "Steam the broccoli for 5 minutes.",
-      "Heat the olive oil and sauté the garlic for 1 minute.",
-      "Add the cooked rice and broccoli to the pan and toss well.",
-      "Finish with lemon zest."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 6,
-        "name": "Whole grain",
-        "backgroundColor": 4294175458,
-        "contentColor": 4284234270
-      },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "title": "Lemon Chicken",
-    "description": "Juicy chicken breasts cooked with lemon, garlic and fresh herbs.",
-    "numberOfServings": 4,
-    "ingredients": [
-      "4 chicken breasts",
-      "Juice and zest of 2 lemons",
-      "3 garlic cloves, minced",
-      "2 tbsp olive oil",
-      "1 tsp dried rosemary",
-      "1 tsp dried thyme",
-      "Salt and pepper to taste"
-    ],
-    "cookingInstructions": [
-      "Season the chicken with salt, pepper, rosemary and thyme.",
-      "Heat the olive oil in a pan and cook the chicken for 6 minutes per side.",
-      "Add the garlic, lemon juice and zest and cook for 2 more minutes, spooning the sauce over the chicken.",
-      "Let it rest for 5 minutes before slicing."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 3,
-        "name": "Lactose-free",
-        "backgroundColor": 4294243831,
-        "contentColor": 4282336848
-      },
-      {
-        "id": 7,
-        "name": "Low-carb",
-        "backgroundColor": 4294176255,
-        "contentColor": 4283116170
-      },
-      {
-        "id": 5,
-        "name": "Low-calorie",
-        "backgroundColor": 4294965723,
-        "contentColor": 4285223680
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "title": "Apple Pie",
-    "description": "A classic apple pie with a flaky crust and cinnamon-spiced filling.",
-    "numberOfServings": 8,
-    "ingredients": [
-      "2 1/2 cups all-purpose flour",
-      "1 cup cold vegan butter",
-      "6 tbsp cold water",
-      "6 apples, peeled and sliced",
+      "1 cup butter",
+      "1 cup brown sugar",
       "1/2 cup sugar",
-      "1 tbsp lemon juice",
-      "2 tsp cinnamon",
-      "2 tbsp cornstarch"
+      "2 eggs",
+      "2 1/4 cups all-purpose flour",
+      "1 tsp baking soda",
+      "1 1/2 cups chocolate chips",
+      "1 cup toasted pecans",
+      "Flaky sea salt"
     ],
     "cookingInstructions": [
-      "Mix the flour with the vegan butter until crumbly, then add the water and form a dough.",
-      "Chill for 30 minutes.",
-      "Toss the apples with the sugar, lemon juice, cinnamon and cornstarch.",
-      "Roll out half of the dough into a pie dish and add the filling.",
-      "Cover with the remaining dough and cut a few slits on top.",
-      "Bake at 200°C for 45 minutes, until golden."
+      "Melt the butter and cook until it smells nutty and turns golden brown, then let it cool.",
+      "Whisk in both sugars and the eggs.",
+      "Stir in the flour and baking soda, then fold in the chocolate and pecans.",
+      "Scoop onto a lined tray and sprinkle with sea salt.",
+      "Bake at 180°C for 10 to 12 minutes."
     ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 3,
-        "name": "Lactose-free",
-        "backgroundColor": 4294243831,
-        "contentColor": 4282336848
-      }
-    ]
+    "dietaryAttributes": []
   },
   {
-    "id": 17,
-    "title": "Oatmeal Porridge",
-    "description": "A creamy bowl of oats topped with fruit and a drizzle of maple syrup.",
-    "numberOfServings": 1,
-    "ingredients": [
-      "1/2 cup rolled oats",
-      "1 cup oat milk",
-      "1/2 banana, sliced",
-      "1 tbsp maple syrup",
-      "1 tbsp chopped walnuts",
-      "1 pinch cinnamon"
-    ],
-    "cookingInstructions": [
-      "Bring the oat milk to a simmer in a small pot.",
-      "Add the oats and cook for 5 minutes, stirring often, until creamy.",
-      "Pour into a bowl and top with banana, walnuts, cinnamon and maple syrup."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 6,
-        "name": "Whole grain",
-        "backgroundColor": 4294175458,
-        "contentColor": 4284234270
-      },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "title": "Roasted Pumpkin",
-    "description": "Caramelized pumpkin wedges roasted with olive oil and warm spices.",
-    "numberOfServings": 4,
-    "ingredients": [
-      "1 small pumpkin, cut into wedges",
-      "2 tbsp olive oil",
-      "1 tsp smoked paprika",
-      "1/2 tsp cinnamon",
-      "Fresh thyme",
-      "Black pepper to taste"
-    ],
-    "cookingInstructions": [
-      "Preheat the oven to 200°C.",
-      "Toss the pumpkin wedges with the olive oil, paprika, cinnamon and pepper.",
-      "Spread them on a baking sheet in a single layer.",
-      "Roast for 30 to 35 minutes, turning halfway through.",
-      "Sprinkle with fresh thyme and serve."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 1,
-        "name": "Vegan",
-        "backgroundColor": 4293787637,
-        "contentColor": 4278210850
-      },
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 5,
-        "name": "Low-calorie",
-        "backgroundColor": 4294965723,
-        "contentColor": 4285223680
-      },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "title": "Corn Tortilla Wraps",
-    "description": "Corn tortillas filled with grilled chicken, peppers and fresh greens.",
-    "numberOfServings": 2,
-    "ingredients": [
-      "4 corn tortillas",
-      "1 chicken breast, sliced into strips",
-      "1 bell pepper, sliced",
-      "1/2 onion, sliced",
-      "1 cup lettuce, shredded",
-      "1 tsp chili powder",
-      "1 tbsp olive oil",
-      "Juice of 1 lime"
-    ],
-    "cookingInstructions": [
-      "Season the chicken with chili powder and lime juice.",
-      "Heat the olive oil and cook the chicken for 6 to 8 minutes.",
-      "Add the pepper and onion and cook for 4 more minutes.",
-      "Warm the tortillas in a dry pan.",
-      "Fill them with lettuce and the chicken mixture, then roll them up."
-    ],
-    "dietaryAttributes": [
-      {
-        "id": 2,
-        "name": "Gluten-free",
-        "backgroundColor": 4294831848,
-        "contentColor": 4287249178
-      },
-      {
-        "id": 3,
-        "name": "Lactose-free",
-        "backgroundColor": 4294243831,
-        "contentColor": 4282336848
-      }
-    ]
-  },
-  {
-    "id": 20,
+    "id": 48,
     "title": "Mango Sorbet",
     "description": "A naturally sweet and refreshing frozen dessert made with ripe mangoes.",
     "numberOfServings": 4,
@@ -791,7 +1694,7 @@
     "dietaryAttributes": [
       {
         "id": 1,
-        "name": "Vegan",
+        "name": "Vegetarian",
         "backgroundColor": 4293787637,
         "contentColor": 4278210850
       },
@@ -814,5 +1717,71 @@
         "contentColor": 4285223680
       }
     ]
+  },
+  {
+    "id": 49,
+    "title": "Mediterranean Mezze Platter with Homemade Hummus, Roasted Red Peppers and Crunchy Vegetables",
+    "description": "A colorful sharing plate with creamy hummus and fresh dippers.",
+    "numberOfServings": 4,
+    "ingredients": [
+      "1 can chickpeas, drained",
+      "3 tbsp tahini",
+      "Juice of 1 lemon",
+      "1 garlic clove",
+      "2 roasted red peppers",
+      "1 cucumber, sliced",
+      "2 carrots, cut into sticks",
+      "1/2 cup olives"
+    ],
+    "cookingInstructions": [
+      "Blend the chickpeas, tahini, lemon juice and garlic until smooth.",
+      "Slice the roasted peppers into strips.",
+      "Arrange the hummus, peppers, vegetables and olives on a platter."
+    ],
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      },
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      },
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Cheesy Chicken Wraps",
+    "description": "Flour tortillas filled with grilled chicken, peppers, cheddar and fresh greens.",
+    "numberOfServings": 2,
+    "ingredients": [
+      "4 flour tortillas",
+      "1 chicken breast, sliced into strips",
+      "1 bell pepper, sliced",
+      "1/2 onion, sliced",
+      "1 cup lettuce, shredded",
+      "1/2 cup shredded cheddar",
+      "1 tsp chili powder",
+      "1 tbsp olive oil",
+      "Juice of 1 lime"
+    ],
+    "cookingInstructions": [
+      "Season the chicken with chili powder and lime juice.",
+      "Heat the olive oil and cook the chicken for 6 to 8 minutes.",
+      "Add the pepper and onion and cook for 4 more minutes.",
+      "Warm the tortillas in a dry pan.",
+      "Fill them with lettuce, cheddar and the chicken mixture, then roll them up."
+    ],
+    "dietaryAttributes": []
   }
 ]
