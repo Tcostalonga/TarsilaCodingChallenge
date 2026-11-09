@@ -3,7 +3,9 @@
 package tarsila.codingchallenge.ui.compose.filter
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -67,8 +69,12 @@ private fun RecipeFilterContent(
             attributes = dietaryAttributes,
             selected = filterDraft.dietaryAttributesIds,
             onToggle = { id ->
-                val current = filterDraft.dietaryAttributesIds
-                val newDietaryAttributesIds = if (id in current) current - id else current + id
+                val currentFilter = filterDraft.dietaryAttributesIds
+                val newDietaryAttributesIds = if (id in currentFilter) {
+                    currentFilter - id
+                } else {
+                    currentFilter + id
+                }
 
                 onChangeFilter(filterDraft.copy(dietaryAttributesIds = newDietaryAttributesIds))
             }
@@ -82,6 +88,40 @@ private fun RecipeFilterContent(
             onChange = { servings: Int? ->
                 onChangeFilter(filterDraft.copy(servings = servings))
             }
+        )
+
+        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
+
+        FilterAddRemoveIngredients(
+            IngredientMode.ADD,
+            filterDraft.includeIngredients,
+            onUpsert = { ingredient ->
+                val currentFilter = filterDraft.includeIngredients
+                val newIngredientsSet = if (ingredient in currentFilter) {
+                    currentFilter - ingredient
+                } else {
+                    currentFilter + ingredient
+                }
+
+                onChangeFilter(filterDraft.copy(includeIngredients = newIngredientsSet))
+            },
+        )
+
+        Spacer(Modifier.height(12.dp))
+
+        FilterAddRemoveIngredients(
+            IngredientMode.REMOVE,
+            filterDraft.excludeIngredients,
+            onUpsert = { ingredient ->
+                val currentFilter = filterDraft.excludeIngredients
+                val newIngredientsSet = if (ingredient in currentFilter) {
+                    currentFilter - ingredient
+                } else {
+                    currentFilter + ingredient
+                }
+
+                onChangeFilter(filterDraft.copy(excludeIngredients = newIngredientsSet))
+            },
         )
 
         Button(

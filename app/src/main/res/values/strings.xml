@@ -21,5 +21,12 @@
     <string name="filter_empty_state_title">Nothing cooking here yet</string>
     <string name="filter_empty_state_description">We couldn\'t find any recipes to show. Try adjusting your search or come back later.</string>
     <string name="filter_empty_state_action_button">Refresh</string>
+    <string name="filter_add_ingredients">Include ingredients</string>
+    <string name="filter_remove_ingredients">Exclude ingredients</string>
+    <string name="filter_example_add">e.g. garlic</string>
+    <string name="filter_example_remove">e.g. egg</string>
+    <string name="filter_ingredients_add_content_description">Add ingredient</string>
+    <string name="filter_ingredients_remove_content_description">Remove ingredient</string>
+    <string name="filter_ingredient_chip_no">No %1$s</string>
 
 </resources>
