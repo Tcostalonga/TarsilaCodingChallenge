@@ -5,19 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import tarsila.codingchallenge.data.remote.repository.RecipeRepositoryImpl
-import tarsila.codingchallenge.data.remote.apimockservice.MockApiService
+import dagger.hilt.android.AndroidEntryPoint
 import tarsila.codingchallenge.ui.compose.RecipeScreen
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: RecipeViewModel by viewModels<RecipeViewModel> {
-        val recipeApi = MockApiService(application.applicationContext)
-        val repository = RecipeRepositoryImpl(recipeApi)
-
-        ViewModelFactory(repository)
-    }
+    private val viewModel: RecipeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

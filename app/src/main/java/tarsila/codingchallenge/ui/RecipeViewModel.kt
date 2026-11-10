@@ -1,8 +1,8 @@
 package tarsila.codingchallenge.ui
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,8 +13,10 @@ import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.domain.RecipeRepository
 import tarsila.codingchallenge.ui.compose.RecipeIntent
+import javax.inject.Inject
 
-class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewModel() {
+@HiltViewModel
+class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRepository) : ViewModel() {
 
     private var _uiState = MutableStateFlow(RecipeUiState())
     val uiState = _uiState.asStateFlow()
@@ -118,11 +120,4 @@ data class RecipeUiState(
     fun loading() = copy(isSuccess = false, isLoading = true, isError = false)
     fun error() = copy(isSuccess = false, isLoading = false, isError = true)
 
-}
-
-class ViewModelFactory(private val recipeRepository: RecipeRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        @Suppress("UNCHECKED_CAST")
-        return RecipeViewModel(recipeRepository) as T
-    }
 }

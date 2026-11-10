@@ -6,8 +6,9 @@ import tarsila.codingchallenge.data.remote.mapper.toRecipeList
 import tarsila.codingchallenge.data.remote.api.RecipeApi
 import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeRepository
+import javax.inject.Inject
 
-class RecipeRepositoryImpl(private val recipeApi: RecipeApi) : RecipeRepository {
+class RecipeRepositoryImpl @Inject constructor(private val recipeApi: RecipeApi) : RecipeRepository {
 
     override suspend fun getAllRecipes(): Result<List<Recipe>> {
         return withContext(Dispatchers.IO) {
