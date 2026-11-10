@@ -3,11 +3,8 @@ package tarsila.codingchallenge.ui.compose.filter
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -42,15 +39,6 @@ fun FilterServings(
                 modifier = Modifier.weight(1f)
             )
         }
-
-        Spacer(Modifier.height(6.dp))
-
-        Text(
-            text = stringResource(R.string.filter_servings_valid_rule),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.padding(start = 4.dp)
-        )
     }
 }
 
@@ -70,6 +58,11 @@ private fun ServingsField(
         placeholder = { Text(stringResource(R.string.any)) },
         suffix = { Text(stringResource(R.string.filter_servings_label)) },
         singleLine = true,
+        supportingText = {
+            Text(
+                text = stringResource(R.string.filter_servings_valid_rule),
+            )
+        },
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Number,
             imeAction = imeAction

@@ -2,11 +2,16 @@ package tarsila.codingchallenge.ui.compose.filter
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.isImeVisible
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.foundation.text.input.clearText
@@ -23,21 +28,26 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import kotlin.time.Duration.Companion.milliseconds
+import kotlinx.coroutines.delay
 import tarsila.codingchallenge.R
- import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
+import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 enum class IngredientMode { ADD, REMOVE }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FilterAddRemoveIngredients(
     mode: IngredientMode,
@@ -46,6 +56,17 @@ fun FilterAddRemoveIngredients(
     modifier: Modifier = Modifier
 ) {
     val textFieldState = rememberTextFieldState()
+
+    val bringIntoViewRequester = remember { BringIntoViewRequester() }
+    val imeVisible = WindowInsets.isImeVisible
+    var hasFocus by remember { mutableStateOf(false) }
+
+    LaunchedEffect(hasFocus, imeVisible, ingredients.size) {
+        if (hasFocus && imeVisible) {
+            delay(200.milliseconds)
+            bringIntoViewRequester.bringIntoView()
+        }
+    }
 
     val title = if (mode == IngredientMode.ADD) {
         stringResource(R.string.filter_add_ingredients)
@@ -71,7 +92,13 @@ fun FilterAddRemoveIngredients(
         textFieldState.clearText()
     }
 
-    Column(modifier = modifier) {
+    Column(
+        modifier = modifier
+            .bringIntoViewRequester(bringIntoViewRequester)
+            .onFocusChanged {
+                hasFocus = it.hasFocus
+            }
+    ) {
         Text(
             text = title,
             style = MaterialTheme.typography.titleSmall,

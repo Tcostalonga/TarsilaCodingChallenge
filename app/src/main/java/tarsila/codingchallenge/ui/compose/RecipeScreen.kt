@@ -153,6 +153,7 @@ private fun RecipeScreen(
                             Box(modifier = Modifier.fillParentMaxSize()) {
                                 RecipesEmptyState(
                                     onClearFilters = {
+                                        filterDraft = RecipeFilter()
                                         onIntent(RecipeIntent.OnTryToFetchRecipes)
                                     })
                             }
