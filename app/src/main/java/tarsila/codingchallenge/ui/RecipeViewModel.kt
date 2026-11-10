@@ -3,6 +3,7 @@ package tarsila.codingchallenge.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,7 +14,6 @@ import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.domain.RecipeRepository
 import tarsila.codingchallenge.ui.compose.RecipeIntent
-import javax.inject.Inject
 
 @HiltViewModel
 class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRepository) : ViewModel() {
@@ -33,7 +33,6 @@ class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRe
         when (intent) {
             is RecipeIntent.OnRecipeClick -> updateRecipeDetailVisibility(intent.recipe)
             RecipeIntent.OnTryToFetchRecipes -> getRecipes()
-            RecipeIntent.ShowSearchField -> updateSearchFieldVisibility()
             is RecipeIntent.OnFilterRecipes -> getFilteredRecipes(intent.filter)
         }
     }
@@ -65,12 +64,6 @@ class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRe
                 .onFailure {
                     _uiState.update { it.error() }
                 }
-        }
-    }
-
-    private fun updateSearchFieldVisibility() {
-        _uiState.update {
-            it.copy(showSearchField = !it.showSearchField)
         }
     }
 
@@ -114,7 +107,6 @@ data class RecipeUiState(
     val isSuccess: Boolean = false,
     val isLoading: Boolean = false,
     val isError: Boolean = false,
-    val showSearchField: Boolean = false
 ) {
     fun success(recipes: List<Recipe>) = copy(recipes = recipes, isSuccess = true, isLoading = false, isError = false)
     fun loading() = copy(isSuccess = false, isLoading = true, isError = false)

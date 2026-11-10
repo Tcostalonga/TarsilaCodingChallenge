@@ -2,8 +2,8 @@
     <string name="app_name">Tarsila Coding Challenge</string>
     <string name="explore_recipes">Explore Recipes</string>
     <string name="filter_recipes_label">Filter list of recipes</string>
-    <string name="search_recipes_label">Search recipes</string>
-    <string name="search_recipes_hint">Search in cooking instructions, e.g. bake</string>
+    <string name="search_recipes_label">Search recipes by cooking instructions</string>
+    <string name="search_recipes_hint">e.g. bake, roast, boil</string>
     <string name="ingredients">Ingredients</string>
     <string name="cooking_instructions">Cooking Instructions</string>
     <string name="error_feedback_title">Couldn\'t load recipes</string>
@@ -11,7 +11,8 @@
     <string name="error_feedback_action_button">Try again</string>
     <string name="loading_state_title">Cooking up some recipes…</string>
     <string name="loading_state_description">This will only take a moment.</string>
-    <string name="filters_label">Filters</string>
+    <string name="filter_label">Filters</string>
+    <string name="filter_clear_all">Clear all</string>
     <string name="filter_servings_label">Servings</string>
     <string name="filter_recipes_text_button">Filter recipes</string>
     <string name="filter_dietary_preferences">Dietary preferences</string>
