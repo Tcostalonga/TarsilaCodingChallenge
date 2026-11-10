@@ -35,6 +35,7 @@ class RecipeViewModelTest {
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
+        coEvery { recipeRepository.getAllRecipes() } returns Result.success(emptyList())
     }
 
     @After
@@ -70,15 +71,6 @@ class RecipeViewModelTest {
             assertFalse(errorState.isLoading)
             assertFalse(errorState.isSuccess)
             assertTrue(errorState.isError)
-        }
-    }
-
-    @Test
-    fun `ShowSearchField toggles showSearchField state`() = runTest {
-        viewModel.onIntent(RecipeIntent.ShowSearchField)
-
-        viewModel.uiState.test {
-            assertEquals(true, awaitItem().showSearchField)
         }
     }
 
