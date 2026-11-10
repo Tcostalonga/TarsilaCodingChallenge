@@ -2,10 +2,12 @@
 
 package tarsila.codingchallenge.ui.compose
 
-import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -31,12 +33,10 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.PreviewLightDark
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.flowWithLifecycle
-import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -46,23 +46,19 @@ import tarsila.codingchallenge.domain.Recipe
 import tarsila.codingchallenge.domain.RecipeFilter
 import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.RecipeViewModel
-import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
 import tarsila.codingchallenge.ui.compose.filter.FilterSearchText
+import tarsila.codingchallenge.ui.compose.filter.RecipeFilterBottomSheet
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesEmptyState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesErrorState
 import tarsila.codingchallenge.ui.compose.placeholders.RecipesLoadingState
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
-private const val SEARCH_DEBOUNCE = 1
+private const val SEARCH_DEBOUNCE = 500
 
 @Composable
 fun RecipeScreen(viewModel: RecipeViewModel) {
 
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-
-    LaunchedEffect(Unit) {
-        viewModel.onIntent(RecipeIntent.OnTryToFetchRecipes)
-    }
 
     RecipeScreen(
         uiState = uiState,
@@ -74,18 +70,18 @@ private fun RecipeScreen(
     uiState: RecipeUiState,
     onIntent: (RecipeIntent) -> Unit,
 ) {
-    val lifecycleOwner = LocalLifecycleOwner.current
     val searchInstructionsQuery = rememberTextFieldState()
     var filterDraft by remember { mutableStateOf(RecipeFilter()) }
     var showFilterBottomSheet by rememberSaveable { mutableStateOf(false) }
 
-    LaunchedEffect(searchInstructionsQuery) {
+    LaunchedEffect(searchInstructionsQuery, uiState.showSearchField) {
         snapshotFlow { searchInstructionsQuery.text.toString() }
             .distinctUntilChanged()
-            .debounce(SEARCH_DEBOUNCE.seconds)
-            .flowWithLifecycle(lifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+            .debounce(SEARCH_DEBOUNCE.milliseconds)
             .collect { query ->
-                onIntent(RecipeIntent.OnFilterRecipes(filterDraft.copy(instructionsQuery = query)))
+                if (uiState.showSearchField) {
+                    onIntent(RecipeIntent.OnFilterRecipes(filterDraft.copy(instructionsQuery = query)))
+                }
             }
     }
 
@@ -138,7 +134,7 @@ private fun RecipeScreen(
                         }
                     }
                 )
-                FilterSearchText(uiState, searchInstructionsQuery)
+                FilterSearchText(uiState.showSearchField, searchInstructionsQuery)
             }
 
         }
@@ -146,7 +142,12 @@ private fun RecipeScreen(
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-            contentPadding = paddingValues,
+            contentPadding = PaddingValues(
+                top = paddingValues.calculateTopPadding() + 16.dp,
+                bottom = paddingValues.calculateBottomPadding() + 16.dp,
+                start = paddingValues.calculateStartPadding(LayoutDirection.Ltr),
+                end = paddingValues.calculateEndPadding(LayoutDirection.Ltr)
+            ),
         ) {
             when {
                 uiState.isLoading -> {
@@ -180,12 +181,10 @@ private fun RecipeScreen(
                     }
 
                     items(uiState.recipes, key = { it.id }) { item ->
-                        AnimatedContent(item.showRecipeDetail) { showRecipeDetailState ->
-                            if (showRecipeDetailState) {
-                                RecipeDetail(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
-                            } else {
-                                RecipeItem(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
-                            }
+                        if (item.showRecipeDetail) {
+                            RecipeDetail(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
+                        } else {
+                            RecipeItem(item, onClick = { onIntent(RecipeIntent.OnRecipeClick(item)) })
                         }
                     }
                 }
@@ -200,6 +199,7 @@ private fun RecipeScreenPreview() {
     TarsilaCodingChallengeTheme {
         RecipeScreen(
             uiState = RecipeUiState(
+                showSearchField = true,
                 isSuccess = true,
                 isLoading = false,
                 isError = false,

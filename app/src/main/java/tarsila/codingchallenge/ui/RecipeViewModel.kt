@@ -19,7 +19,13 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
     private var _uiState = MutableStateFlow(RecipeUiState())
     val uiState = _uiState.asStateFlow()
 
+    private var lastAppliedFilter = RecipeFilter()
+
     private var searchJob: Job? = null
+
+    init {
+        getRecipes()
+    }
 
     fun onIntent(intent: RecipeIntent) {
         when (intent) {
@@ -67,9 +73,14 @@ class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewMode
     }
 
     private fun getFilteredRecipes(filter: RecipeFilter) {
+        if (lastAppliedFilter == filter) return
+
         searchJob?.cancel()
+
         searchJob = viewModelScope.launch {
             _uiState.update { it.loading() }
+
+            lastAppliedFilter = filter
             recipeRepository.getFilteredRecipes(
                 dietaryAttributeIds = filter.dietaryAttributesIds,
                 servings = filter.servings,

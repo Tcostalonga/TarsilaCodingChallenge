@@ -24,23 +24,21 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tarsila.codingchallenge.R
-import tarsila.codingchallenge.ui.RecipeUiState
 import tarsila.codingchallenge.ui.theme.TarsilaCodingChallengeTheme
 
 @Composable
 fun FilterSearchText(
-    uiState: RecipeUiState,
+    showSearchField: Boolean,
     searchInstructionsQuery: TextFieldState
 ) {
-    AnimatedVisibility(uiState.showSearchField) {
+    AnimatedVisibility(showSearchField) {
         TextField(
             state = searchInstructionsQuery,
             label = { Text(text = stringResource(R.string.search_recipes_hint)) },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 24.dp)
-                .background(MaterialTheme.colorScheme.background),
+                .background(MaterialTheme.colorScheme.background)
+                .padding(horizontal = 16.dp),
             lineLimits = TextFieldLineLimits.SingleLine,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text,
@@ -62,7 +60,7 @@ fun FilterSearchText(
 private fun FilterSearchTextPreview() {
     TarsilaCodingChallengeTheme {
         Surface {
-            FilterSearchText(uiState = RecipeUiState(showSearchField = true), searchInstructionsQuery = TextFieldState())
+            FilterSearchText(true, searchInstructionsQuery = TextFieldState())
         }
     }
 }
