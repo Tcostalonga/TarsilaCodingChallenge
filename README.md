@@ -121,3 +121,7 @@ To run the unit tests from the command line:
 - **English only:** All the texts are in English, and there's no localization.
 
 ---
+
+<img width="3298" height="3510" alt="app_photos" src="https://github.com/user-attachments/assets/e5af20ce-afb9-4c61-aef6-a2408b49de3b" />
+
+
