@@ -2,7 +2,7 @@
 
 This is the Android app I built for the challenge, using Kotlin and Jetpack Compose. You can browse recipes, tap on each one to see its ingredients and cooking steps and apply multi-criteria filters: dietary restrictions, maximum servings, ingredients to include or exclude and a search by cooking instructions.
 
----
+<img width="3298" height="3510" alt="app_photos" src="https://github.com/user-attachments/assets/e5af20ce-afb9-4c61-aef6-a2408b49de3b" />
 
 ## Setup Instructions
 
@@ -77,24 +77,24 @@ Instead of showing just a generic progress bar, I created a styled composable fo
 
 ## Assumptions and Trade-offs
 
-### Data source
+### 1. Data source
 I bundled the data as a local JSON file (`res/raw/recipes.json`) behind a Retrofit interface. This keeps the app fully self-contained and reproducible, with no dependency on third-party APIs or keys that can expire. The trade-off is that the data is static unless I bundle a new file.
 
-### Dependency injection
+### 2. Dependency injection
 I started with manual DI, but since I had time left, I migrated to **Hilt**. I thought this would be appreciated in the exercise and in a real project I'd consider it a must, because it makes testing easier and brings more cohesion and less coupling to the code.
 
-### Dietary attributes come from the data, not from an enum
+### 3. Dietary attributes come from the data, not from an enum
 I kept the dietary attributes, including their color fields in the JSON and read them from the mocked endpoint. The filter chips are built dynamically from the recipes that are available and they're styled with the colors that come from the data.
 
 The benefit is that if this data came from a real API, a new dietary attribute would show up in the app right away, with its own colors, and I wouldn't need to recompile the app and wait for users to update it. If I had parsed them into an enum, every new attribute would require a new release and an app update before users could see it.
 
-### State persistence
+### 4. State persistence
 I keep the expanded cards in `RecipeUiState`. This survives screen rotation through the `ViewModel`, but not process death. For a browsing session, I thought this was enough and avoided adding a database just for that.
 
-### Pagination
+### 5. Pagination
 I didn't add pagination. Using a paging library would add a lot of complexity to the exercise and with this dataset size the effort wasn't worth it.
 
-### Offline caching
+### 6. Offline caching
 I didn't add offline support. Right now the app reads the JSON again on every fetch. In a real world scenario, good options would be to add a in-memory cache or add local database with a cache-first repository, which would enable offline support and search indexing.
 
 ---
@@ -121,7 +121,5 @@ To run the unit tests from the command line:
 - **English only:** All the texts are in English, and there's no localization.
 
 ---
-
-<img width="3298" height="3510" alt="app_photos" src="https://github.com/user-attachments/assets/e5af20ce-afb9-4c61-aef6-a2408b49de3b" />
 
 
