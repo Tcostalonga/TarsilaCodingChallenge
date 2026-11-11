@@ -25,7 +25,7 @@ class MockApiService(private val context: Context) : RecipeApi {
                 }
 
             val result = json.decodeFromString<List<RecipeResponse>>(jsonString)
-            simulateNetworkDelay(3.seconds)
+            simulateNetworkDelay(2.seconds)
             result
         } catch (e: Exception) {
             /**

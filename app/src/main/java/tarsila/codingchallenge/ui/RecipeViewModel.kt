@@ -58,7 +58,7 @@ class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRe
                     val dietaryAttributeList = recipes.allDietaryAttributes()
 
                     _uiState.update {
-                        it.success(recipes).copy(dietaryAttributeList = dietaryAttributeList)
+                        it.success(recipes).copy(dietaryAttributes = dietaryAttributeList)
                     }
                 }
                 .onFailure {
@@ -103,7 +103,7 @@ class RecipeViewModel @Inject constructor(private val recipeRepository: RecipeRe
 
 data class RecipeUiState(
     val recipes: List<Recipe> = emptyList(),
-    val dietaryAttributeList: Set<DietaryAttribute> = setOf(),
+    val dietaryAttributes: Set<DietaryAttribute> = setOf(),
     val isSuccess: Boolean = false,
     val isLoading: Boolean = false,
     val isError: Boolean = false,

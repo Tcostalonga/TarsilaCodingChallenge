@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Fettuccine Alfredo",
     "description": "Ribbons of fettuccine coated in a velvety sauce made with butter, heavy cream and freshly grated parmesan, finished with a pinch of black pepper. It is a simple, comforting classic that comes together in the time it takes to boil the pasta, ideal for busy nights.",
-    "numberOfServings": 3,
+    "numberOfServings": 6,
     "ingredients": [
       "300 g fettuccine",
       "3 tbsp butter",
@@ -17,13 +17,20 @@
       "Stir in the parmesan until melted.",
       "Toss the pasta with the sauce and season with pepper."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Edamame Stir-Fry with Brown Rice",
     "description": "Quick veggie stir-fry served over nutty brown rice.",
-    "numberOfServings": 3,
+    "numberOfServings": 12,
     "ingredients": [
       "1 cup brown rice",
       "1 1/2 cups shelled edamame",
@@ -64,7 +71,7 @@
     "id": 3,
     "title": "Neapolitan-Style Margherita Pizza with Fresh Mozzarella and Basil",
     "description": "Thin and chewy crust topped with tomato, mozzarella and basil.",
-    "numberOfServings": 2,
+    "numberOfServings": 4,
     "ingredients": [
       "250 g pizza dough",
       "1/2 cup tomato sauce",
@@ -79,13 +86,20 @@
       "Bake for 8 to 10 minutes, until the crust is golden.",
       "Finish with basil and a drizzle of olive oil."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      }
+    ]
   },
   {
     "id": 4,
     "title": "Shrimp Pad Thai",
     "description": "Rice noodles stir-fried with shrimp, egg, peanuts and lime.",
-    "numberOfServings": 2,
+    "numberOfServings": 1,
     "ingredients": [
       "200 g flat rice noodles",
       "200 g shrimp, peeled",
@@ -123,7 +137,7 @@
     "id": 5,
     "title": "Cauliflower Fried Rice",
     "description": "A lighter fried rice made with grated cauliflower.",
-    "numberOfServings": 2,
+    "numberOfServings": 11,
     "ingredients": [
       "1 head cauliflower, grated",
       "2 eggs",
@@ -169,7 +183,7 @@
     "id": 6,
     "title": "Roasted Chickpea Snack",
     "description": "Crunchy oven-roasted chickpeas with smoky spices.",
-    "numberOfServings": 4,
+    "numberOfServings": 2,
     "ingredients": [
       "2 cans chickpeas, drained and dried",
       "1 tbsp olive oil",
@@ -207,9 +221,9 @@
     "id": 7,
     "title": "Spaghetti Carbonara",
     "description": "Silky Roman-style pasta where hot spaghetti is tossed with crispy pancetta, eggs and plenty of grated pecorino until it turns into a glossy, creamy sauce without any cream at all. The secret is working off the heat so the eggs stay smooth instead of scrambling.",
-    "numberOfServings": 2,
+    "numberOfServings": 5,
     "ingredients": [
-      "200 g spaghetti",
+      "200 g gluten-free spaghetti",
       "100 g pancetta, diced",
       "2 eggs",
       "1/2 cup grated pecorino",
@@ -222,13 +236,20 @@
       "Toss the hot pasta with the pancetta, then remove from the heat and stir in the egg mixture.",
       "Add a splash of pasta water to make it creamy and serve right away."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 8,
     "title": "Whole Wheat Spaghetti Marinara",
     "description": "Whole wheat pasta tossed in a simple homemade tomato and basil sauce.",
-    "numberOfServings": 3,
+    "numberOfServings": 2,
     "ingredients": [
       "250 g whole wheat spaghetti",
       "1 can (400 g) crushed tomatoes",
@@ -265,11 +286,11 @@
     "id": 9,
     "title": "Classic Smash Cheeseburger with Melted Cheddar, Crisp Lettuce and Toasted Buns",
     "description": "Juicy beef patty with melted cheddar on a toasted bun.",
-    "numberOfServings": 2,
+    "numberOfServings": 10,
     "ingredients": [
       "2 beef patties",
       "2 slices cheddar",
-      "2 burger buns",
+      "2 gluten-free burger buns",
       "Lettuce leaves",
       "1 tomato, sliced",
       "Ketchup and mustard"
@@ -280,13 +301,20 @@
       "Add the cheddar in the last minute so it melts.",
       "Toast the buns and assemble the burgers with lettuce, tomato and sauces."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 10,
     "title": "Homemade Whole Wheat Bread",
     "description": "A soft and hearty loaf made with whole wheat flour and a touch of honey.",
-    "numberOfServings": 8,
+    "numberOfServings": 5,
     "ingredients": [
       "3 cups whole wheat flour",
       "1 packet (7 g) dry yeast",
@@ -322,10 +350,10 @@
     "id": 11,
     "title": "Lemon Chicken",
     "description": "Juicy chicken breasts lightly dredged in flour and pan-seared until golden, then finished in a glossy butter sauce with fresh lemon, garlic, rosemary and thyme. It is a bright and comforting weeknight dinner that pairs perfectly with mashed potatoes, rice or a simple green salad.",
-    "numberOfServings": 4,
+    "numberOfServings": 5,
     "ingredients": [
       "4 chicken breasts",
-      "1/3 cup all-purpose flour",
+      "1/3 cup rice flour",
       "Juice and zest of 2 lemons",
       "3 garlic cloves, minced",
       "2 tbsp olive oil",
@@ -340,13 +368,20 @@
       "Add the butter, garlic, lemon juice and zest and cook for 2 more minutes, spooning the sauce over the chicken.",
       "Let it rest for 5 minutes before slicing."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 12,
     "title": "Rustic Garden Vegetable Soup with Fresh Thyme, Potatoes and Zucchini",
     "description": "A comforting soup packed with seasonal vegetables and fresh herbs.",
-    "numberOfServings": 4,
+    "numberOfServings": 8,
     "ingredients": [
       "2 carrots, diced",
       "2 celery stalks, diced",
@@ -392,7 +427,7 @@
     "id": 13,
     "title": "Banana Oat Cookies",
     "description": "Soft two-ingredient cookies sweetened only with banana.",
-    "numberOfServings": 12,
+    "numberOfServings": 2,
     "ingredients": [
       "2 ripe bananas",
       "1 1/2 cups rolled oats",
@@ -436,13 +471,13 @@
     "id": 14,
     "title": "French Onion Soup",
     "description": "Deeply caramelized onions simmered in a savory beef broth, then topped with a toasted slice of baguette and a generous layer of melted gruyère. It takes a little patience to brown the onions properly, but the sweet and rich flavor is completely worth the wait on a cold day.",
-    "numberOfServings": 4,
+    "numberOfServings": 10,
     "ingredients": [
       "6 onions, thinly sliced",
       "3 tbsp butter",
       "1 tbsp flour",
       "1/2 cup dry white wine",
-      "1.5 l beef broth",
+      "1.5 l low-sodium beef broth",
       "4 slices baguette",
       "150 g gruyère, grated"
     ],
@@ -453,13 +488,20 @@
       "Pour into oven-safe bowls and top with the baguette and gruyère.",
       "Broil for 3 minutes, until the cheese is bubbly."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
   },
   {
     "id": 15,
     "title": "Rainbow Avocado Power Bowl with Baby Spinach, Red Cabbage and Tahini Dressing",
     "description": "A colorful bowl with avocado, leafy greens, seeds and a tahini dressing.",
-    "numberOfServings": 1,
+    "numberOfServings": 6,
     "ingredients": [
       "1 avocado, sliced",
       "1 cup baby spinach",
@@ -501,11 +543,11 @@
     "id": 16,
     "title": "Panko-Crusted Salmon",
     "description": "Salmon fillets with a crunchy panko and parmesan crust, served with asparagus.",
-    "numberOfServings": 2,
+    "numberOfServings": 3,
     "ingredients": [
       "2 salmon fillets",
       "1 bunch asparagus",
-      "1/2 cup panko breadcrumbs",
+      "1/2 cup gluten-free panko breadcrumbs",
       "1/4 cup grated parmesan",
       "2 tbsp melted butter",
       "Juice of 1 lemon",
@@ -519,13 +561,20 @@
       "Bake the salmon and asparagus on the same tray for 12 to 15 minutes.",
       "Serve together."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 17,
     "title": "Cucumber Gazpacho",
     "description": "A chilled green soup blended from crisp cucumbers, green pepper, fresh herbs and a touch of garlic, finished with a drizzle of good olive oil. It needs no cooking at all, which makes it perfect for hot summer days when you want something refreshing, light and ready in minutes.",
-    "numberOfServings": 4,
+    "numberOfServings": 9,
     "ingredients": [
       "3 cucumbers, chopped",
       "1 green bell pepper, chopped",
@@ -571,42 +620,50 @@
   {
     "id": 18,
     "title": "Crispy Fish Tacos",
-    "description": "Flour tortillas with crispy beer-battered cod, crunchy slaw and sour cream.",
-    "numberOfServings": 4,
+    "description": "Flour tortillas with crispy beer-battered cod, crunchy slaw and a zesty lime mayo.",
+    "numberOfServings": 9,
     "ingredients": [
       "400 g cod fillets",
       "8 flour tortillas",
       "1/2 cup all-purpose flour",
       "1/2 cup beer",
       "2 cups shredded cabbage",
-      "1/3 cup sour cream",
+      "1/3 cup mayonnaise",
       "Juice of 1 lime",
       "1 tsp chili powder"
     ],
     "cookingInstructions": [
       "Whisk the flour, beer and chili powder into a batter.",
       "Dip the cod in the batter and pan-fry for 3 minutes per side until crispy.",
-      "Mix the sour cream with lime juice and toss half with the cabbage.",
+      "Mix the mayonnaise with lime juice and toss half with the cabbage.",
       "Fill the warm tortillas with fish and slaw and drizzle with the remaining sauce."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
   },
   {
     "id": 19,
     "title": "Roasted Pumpkin",
     "description": "Caramelized pumpkin wedges roasted with olive oil, smoked paprika and a pinch of cinnamon until the edges turn golden and slightly crispy. Finished with fresh thyme, they make a cozy autumn side dish that goes well with grains, salads or a simple roast.",
-    "numberOfServings": 4,
+    "numberOfServings": 12,
     "ingredients": [
       "1 small pumpkin, cut into wedges",
       "2 tbsp olive oil",
       "1 tsp smoked paprika",
       "1/2 tsp cinnamon",
+      "1 tsp sea salt flakes",
       "Fresh thyme",
       "Black pepper to taste"
     ],
     "cookingInstructions": [
       "Preheat the oven to 200°C.",
-      "Toss the pumpkin wedges with the olive oil, paprika, cinnamon and pepper.",
+      "Toss the pumpkin wedges with the olive oil, paprika, cinnamon, salt and pepper.",
       "Spread them on a baking sheet in a single layer.",
       "Roast for 30 to 35 minutes, turning halfway through.",
       "Sprinkle with fresh thyme and serve."
@@ -629,12 +686,6 @@
         "name": "Low-calorie",
         "backgroundColor": 4294965723,
         "contentColor": 4285223680
-      },
-      {
-        "id": 4,
-        "name": "Low-sodium",
-        "backgroundColor": 4293588223,
-        "contentColor": 4278930059
       }
     ]
   },
@@ -642,7 +693,7 @@
     "id": 20,
     "title": "Overnight Mixed Berry Chia Pudding with Coconut Yogurt and Toasted Almonds",
     "description": "A make-ahead breakfast that sets in the fridge overnight.",
-    "numberOfServings": 2,
+    "numberOfServings": 9,
     "ingredients": [
       "1/3 cup chia seeds",
       "1 1/2 cups almond milk",
@@ -687,7 +738,7 @@
     "id": 21,
     "title": "Fluffy Buttermilk Pancakes",
     "description": "Tall, soft pancakes for a classic weekend breakfast.",
-    "numberOfServings": 4,
+    "numberOfServings": 1,
     "ingredients": [
       "2 cups all-purpose flour",
       "2 tbsp sugar",
@@ -702,13 +753,20 @@
       "Combine without overmixing.",
       "Cook 1/4 cup of batter per pancake for 2 minutes per side."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      }
+    ]
   },
   {
     "id": 22,
     "title": "Hearty Barley and Wild Mushroom Soup with Fresh Thyme and Root Vegetables",
     "description": "A warming whole-grain soup full of earthy flavors.",
-    "numberOfServings": 6,
+    "numberOfServings": 11,
     "ingredients": [
       "1 cup hulled barley",
       "300 g mixed mushrooms, sliced",
@@ -756,7 +814,7 @@
     "id": 23,
     "title": "Tomato Basil Bruschetta",
     "description": "Toasted whole wheat bread topped with fresh tomatoes.",
-    "numberOfServings": 4,
+    "numberOfServings": 11,
     "ingredients": [
       "1 whole wheat baguette, sliced",
       "4 tomatoes, diced",
@@ -799,7 +857,7 @@
     "ingredients": [
       "2 chicken breasts",
       "1 head romaine lettuce, chopped",
-      "1 cup croutons",
+      "1 cup gluten-free croutons",
       "1/3 cup shaved parmesan",
       "3 tbsp mayonnaise",
       "1 tsp Dijon mustard",
@@ -812,13 +870,20 @@
       "Toss the lettuce with the dressing.",
       "Top with the chicken, croutons and parmesan."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 25,
     "title": "Greek Yogurt Parfait",
     "description": "Layers of yogurt, oat granola and fresh berries.",
-    "numberOfServings": 1,
+    "numberOfServings": 8,
     "ingredients": [
       "3/4 cup Greek yogurt",
       "1/3 cup whole grain oat granola",
@@ -849,7 +914,7 @@
     "id": 26,
     "title": "Apple Pie",
     "description": "A classic apple pie with a flaky homemade crust and a generous filling of tender apples tossed with cinnamon, sugar and a squeeze of lemon. It is baked until golden and bubbling, and tastes even better served slightly warm with a scoop of your favorite dairy-free ice cream.",
-    "numberOfServings": 8,
+    "numberOfServings": 10,
     "ingredients": [
       "2 1/2 cups all-purpose flour",
       "1 cup cold vegan butter",
@@ -887,7 +952,7 @@
     "id": 27,
     "title": "Brown Rice with Broccoli",
     "description": "A simple and wholesome side dish with brown rice, broccoli and garlic.",
-    "numberOfServings": 3,
+    "numberOfServings": 7,
     "ingredients": [
       "1 cup brown rice",
       "2 cups broccoli florets",
@@ -928,7 +993,7 @@
     "id": 28,
     "title": "Spiralized Zucchini Noodles with Fresh Basil Pesto, Toasted Pine Nuts and Cherry Tomatoes",
     "description": "A fresh, low-carb alternative to pasta with vegan pesto.",
-    "numberOfServings": 2,
+    "numberOfServings": 11,
     "ingredients": [
       "3 zucchinis, spiralized",
       "2 cups fresh basil",
@@ -975,7 +1040,7 @@
     "id": 29,
     "title": "Baked Sweet Potato Fries",
     "description": "Crispy on the outside and soft in the middle, these oven-baked sweet potato fries are tossed in olive oil and smoked paprika for a little warmth. They are a much lighter alternative to deep-fried fries and pair perfectly with burgers, sandwiches or a simple dipping sauce.",
-    "numberOfServings": 3,
+    "numberOfServings": 10,
     "ingredients": [
       "2 sweet potatoes, cut into sticks",
       "2 tbsp olive oil",
@@ -1015,7 +1080,7 @@
     "id": 30,
     "title": "Creamy Oat Milk Porridge with Sliced Banana, Toasted Walnuts and Maple Syrup",
     "description": "A creamy bowl of oats topped with fruit and a drizzle of maple syrup.",
-    "numberOfServings": 1,
+    "numberOfServings": 4,
     "ingredients": [
       "1/2 cup rolled oats",
       "1 cup oat milk",
@@ -1054,7 +1119,7 @@
     "id": 31,
     "title": "Strawberry Smoothie",
     "description": "A thick and refreshing smoothie blended from frozen strawberries, ripe banana and unsweetened almond milk, with a spoonful of chia seeds for extra fiber. It takes less than five minutes to make and works as a quick breakfast, a light snack or a cool treat on hot afternoons.",
-    "numberOfServings": 2,
+    "numberOfServings": 12,
     "ingredients": [
       "2 cups frozen strawberries",
       "1 banana",
@@ -1092,7 +1157,7 @@
     "id": 32,
     "title": "Blueberry Muffins",
     "description": "Moist whole wheat muffins bursting with fresh blueberries.",
-    "numberOfServings": 12,
+    "numberOfServings": 7,
     "ingredients": [
       "2 cups whole wheat flour",
       "1 cup fresh blueberries",
@@ -1129,32 +1194,38 @@
   {
     "id": 33,
     "title": "Grilled Ribeye Steak with Fresh Herb Chimichurri and Charred Lemon",
-    "description": "Butter-basted steak with a bright parsley sauce and garlic bread.",
-    "numberOfServings": 2,
+    "description": "Olive oil-basted steak with a bright parsley sauce and grilled garlic toast.",
+    "numberOfServings": 8,
     "ingredients": [
       "2 ribeye steaks",
-      "2 tbsp butter",
       "1 cup parsley, chopped",
       "2 garlic cloves, minced",
       "1/3 cup olive oil",
       "2 tbsp red wine vinegar",
       "1 lemon, halved",
-      "4 slices garlic bread",
+      "4 slices rustic bread",
       "Salt and pepper to taste"
     ],
     "cookingInstructions": [
       "Mix the parsley, garlic, olive oil and vinegar to make the chimichurri.",
-      "Season the steaks and grill for 4 to 5 minutes per side, basting with the butter.",
-      "Grill the lemon halves cut side down and toast the garlic bread.",
-      "Rest the steaks for 5 minutes and serve with the chimichurri, lemon and garlic bread."
+      "Season the steaks and grill for 4 to 5 minutes per side, brushing with a little of the olive oil.",
+      "Grill the lemon halves cut side down and toast the bread, then rub it with garlic.",
+      "Rest the steaks for 5 minutes and serve with the chimichurri, lemon and garlic toast."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 3,
+        "name": "Lactose-free",
+        "backgroundColor": 4294243831,
+        "contentColor": 4282336848
+      }
+    ]
   },
   {
     "id": 34,
     "title": "Mushroom Risotto",
     "description": "Creamy arborio rice slowly cooked with golden mushrooms, a splash of dry white wine and plenty of parmesan. Each ladle of warm broth is stirred in patiently until the rice turns silky and tender, making it a cozy dinner for chilly evenings or a special weekend meal.",
-    "numberOfServings": 3,
+    "numberOfServings": 6,
     "ingredients": [
       "1 cup arborio rice",
       "250 g mushrooms, sliced",
@@ -1188,14 +1259,14 @@
     "id": 35,
     "title": "Creamy Beef Stroganoff with Mushrooms, Caramelized Onions and Buttered Egg Noodles",
     "description": "Tender beef strips in a rich sour cream and mushroom sauce.",
-    "numberOfServings": 4,
+    "numberOfServings": 1,
     "ingredients": [
       "500 g beef sirloin, sliced into strips",
       "250 g mushrooms, sliced",
       "1 onion, sliced",
       "2 tbsp butter",
       "1 tbsp flour",
-      "1 cup beef broth",
+      "1 cup low-sodium beef broth",
       "1/2 cup sour cream",
       "300 g egg noodles"
     ],
@@ -1206,13 +1277,20 @@
       "Return the beef and stir in the sour cream.",
       "Serve over the cooked egg noodles."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 4,
+        "name": "Low-sodium",
+        "backgroundColor": 4293588223,
+        "contentColor": 4278930059
+      }
+    ]
   },
   {
     "id": 36,
     "title": "Caprese Salad",
     "description": "Fresh mozzarella, ripe tomatoes and basil with olive oil.",
-    "numberOfServings": 2,
+    "numberOfServings": 4,
     "ingredients": [
       "2 large tomatoes, sliced",
       "200 g fresh mozzarella, sliced",
@@ -1244,7 +1322,7 @@
     "id": 37,
     "title": "Creamy Red Lentil Coconut Curry with Ginger, Turmeric and Fresh Cilantro",
     "description": "A warming curry with red lentils, coconut milk and aromatic spices.",
-    "numberOfServings": 4,
+    "numberOfServings": 5,
     "ingredients": [
       "1 cup red lentils, rinsed",
       "1 can (400 ml) coconut milk",
@@ -1327,7 +1405,7 @@
     "id": 39,
     "title": "Thai Green Curry with Crispy Tofu, Bamboo Shoots and Fragrant Jasmine Rice",
     "description": "Creamy coconut curry with tofu and vegetables.",
-    "numberOfServings": 4,
+    "numberOfServings": 8,
     "ingredients": [
       "400 g firm tofu, cubed",
       "1 can (400 ml) coconut milk",
@@ -1369,7 +1447,7 @@
     "id": 40,
     "title": "Black Bean Tacos",
     "description": "Warm corn tortillas filled with smoky spiced black beans, a bright homemade tomato and lime salsa and creamy avocado slices. They come together in about twenty minutes, work great for a casual weeknight dinner and are easy to customize with your favorite toppings.",
-    "numberOfServings": 4,
+    "numberOfServings": 7,
     "ingredients": [
       "8 corn tortillas",
       "2 cans black beans, drained",
@@ -1413,7 +1491,7 @@
     "id": 41,
     "title": "Chickpea Salad",
     "description": "A fresh and protein-rich salad with chickpeas, cucumber, tomatoes and lemon dressing.",
-    "numberOfServings": 2,
+    "numberOfServings": 1,
     "ingredients": [
       "1 can chickpeas, drained and rinsed",
       "1 cucumber, diced",
@@ -1455,7 +1533,7 @@
     "id": 42,
     "title": "Quinoa Tabbouleh",
     "description": "A light and zesty twist on the classic Middle Eastern salad, made with fluffy quinoa instead of bulgur and loaded with fresh parsley, mint, juicy tomatoes and crunchy cucumber. The lemon and olive oil dressing keeps it bright, and it tastes even better after resting in the fridge for an hour.",
-    "numberOfServings": 4,
+    "numberOfServings": 3,
     "ingredients": [
       "1 cup quinoa, rinsed",
       "2 cups water",
@@ -1503,9 +1581,9 @@
     "id": 43,
     "title": "Classic Beef Lasagna with Ricotta, Fresh Basil and Slow-Simmered Tomato Ragù",
     "description": "Layers of pasta, rich meat sauce and creamy ricotta baked until bubbly.",
-    "numberOfServings": 8,
+    "numberOfServings": 12,
     "ingredients": [
-      "12 lasagna sheets",
+      "12 gluten-free lasagna sheets",
       "500 g ground beef",
       "1 onion, chopped",
       "2 garlic cloves, minced",
@@ -1523,7 +1601,14 @@
       "Top with the remaining parmesan and bake at 180°C for 40 minutes.",
       "Let it rest for 10 minutes before slicing."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 2,
+        "name": "Gluten-free",
+        "backgroundColor": 4294831848,
+        "contentColor": 4287249178
+      }
+    ]
   },
   {
     "id": 44,
@@ -1571,7 +1656,7 @@
     "id": 45,
     "title": "Spinach Omelette",
     "description": "A quick and nutritious omelette filled with fresh spinach and herbs.",
-    "numberOfServings": 1,
+    "numberOfServings": 3,
     "ingredients": [
       "3 eggs",
       "1 cup fresh spinach",
@@ -1611,7 +1696,7 @@
     "id": 46,
     "title": "Turkey Meatballs in Tomato Sauce",
     "description": "Tender turkey meatballs made with almond flour instead of breadcrumbs, gently simmered in a garlicky tomato sauce with fresh herbs. They are lighter than classic beef meatballs, freeze really well and can be served over zucchini noodles, rice or simply with a fresh green salad.",
-    "numberOfServings": 4,
+    "numberOfServings": 3,
     "ingredients": [
       "500 g ground turkey",
       "1/3 cup almond flour",
@@ -1653,7 +1738,7 @@
     "id": 47,
     "title": "Brown Butter Chocolate Chip Cookies with Flaky Sea Salt and Toasted Pecans",
     "description": "Chewy cookies with nutty brown butter and pools of chocolate.",
-    "numberOfServings": 24,
+    "numberOfServings": 7,
     "ingredients": [
       "1 cup butter",
       "1 cup brown sugar",
@@ -1672,13 +1757,20 @@
       "Scoop onto a lined tray and sprinkle with sea salt.",
       "Bake at 180°C for 10 to 12 minutes."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 1,
+        "name": "Vegetarian",
+        "backgroundColor": 4293787637,
+        "contentColor": 4278210850
+      }
+    ]
   },
   {
     "id": 48,
     "title": "Mango Sorbet",
     "description": "A naturally sweet and refreshing frozen dessert made with ripe mangoes.",
-    "numberOfServings": 4,
+    "numberOfServings": 6,
     "ingredients": [
       "3 ripe mangoes, peeled and cubed",
       "Juice of 1 lime",
@@ -1722,7 +1814,7 @@
     "id": 49,
     "title": "Mediterranean Mezze Platter with Homemade Hummus, Roasted Red Peppers and Crunchy Vegetables",
     "description": "A colorful sharing plate with creamy hummus and fresh dippers.",
-    "numberOfServings": 4,
+    "numberOfServings": 6,
     "ingredients": [
       "1 can chickpeas, drained",
       "3 tbsp tahini",
@@ -1763,9 +1855,9 @@
     "id": 50,
     "title": "Cheesy Chicken Wraps",
     "description": "Flour tortillas filled with grilled chicken, peppers, cheddar and fresh greens.",
-    "numberOfServings": 2,
+    "numberOfServings": 9,
     "ingredients": [
-      "4 flour tortillas",
+      "4 low-carb tortillas",
       "1 chicken breast, sliced into strips",
       "1 bell pepper, sliced",
       "1/2 onion, sliced",
@@ -1782,6 +1874,13 @@
       "Warm the tortillas in a dry pan.",
       "Fill them with lettuce, cheddar and the chicken mixture, then roll them up."
     ],
-    "dietaryAttributes": []
+    "dietaryAttributes": [
+      {
+        "id": 7,
+        "name": "Low-carb",
+        "backgroundColor": 4294176255,
+        "contentColor": 4283116170
+      }
+    ]
   }
 ]

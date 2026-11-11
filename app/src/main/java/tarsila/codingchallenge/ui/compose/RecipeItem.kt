@@ -35,7 +35,7 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
         shape = RoundedCornerShape(20.dp),
     ) {
         Column(
-            modifier = Modifier.padding(vertical = 12.dp, horizontal = 18.dp)
+            modifier = Modifier.padding(vertical = 12.dp, horizontal = 16.dp)
         ) {
             Text(
                 text = recipe.title,
@@ -55,6 +55,8 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
                 overflow = TextOverflow.Ellipsis
             )
 
+            Spacer(Modifier.height(2.dp))
+
             ServingsAndDietaryAttributes(recipe, scrollState)
         }
     }
@@ -64,39 +66,39 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
 @Composable
 private fun RecipeItemPreview() {
     TarsilaCodingChallengeTheme {
-    RecipeItem(
-        Recipe(
-            id = 1,
-            "Mushroom Risotto",
-            "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
-            3,
-            listOf(
-                "    \"1 cup arborio rice\",\n" +
-                        "    \"250 g mushrooms, sliced\",\n" +
-                        "    \"1 shallot, finely chopped\",\n" +
-                        "    \"2 garlic cloves, minced\",\n" +
-                        "    \"1/2 cup dry white wine\",\n" +
-                        "    \"1 l hot vegetable broth\",\n" +
-                        "    \"2 tbsp butter\",\n" +
-                        "    \"1/2 cup grated parmesan\",\n" +
-                        "    \"Salt and pepper to taste\""
-            ),
-            listOf(
-                "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
-                "In the same pan, sauté the shallot and garlic.",
-                "Add the rice and toast for 2 minutes.",
-                "Pour in the wine and stir until absorbed.",
-                "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
-                "Stir in the mushrooms, the remaining butter and the parmesan.",
-                "Season and serve immediately."
-            ),
-            listOf(
-                DietaryAttribute(
-                    id = 9383, name = "Gluten-free", contentColor = 4294831848, backgroundColor = 4287249178
+        RecipeItem(
+            Recipe(
+                id = 1,
+                "Mushroom Risotto",
+                "Creamy arborio rice slowly cooked with mushrooms, white wine and parmesan.",
+                3,
+                listOf(
+                    "    \"1 cup arborio rice\",\n" +
+                            "    \"250 g mushrooms, sliced\",\n" +
+                            "    \"1 shallot, finely chopped\",\n" +
+                            "    \"2 garlic cloves, minced\",\n" +
+                            "    \"1/2 cup dry white wine\",\n" +
+                            "    \"1 l hot vegetable broth\",\n" +
+                            "    \"2 tbsp butter\",\n" +
+                            "    \"1/2 cup grated parmesan\",\n" +
+                            "    \"Salt and pepper to taste\""
+                ),
+                listOf(
+                    "Melt 1 tbsp of butter in a pan and cook the mushrooms until golden, then set aside.",
+                    "In the same pan, sauté the shallot and garlic.",
+                    "Add the rice and toast for 2 minutes.",
+                    "Pour in the wine and stir until absorbed.",
+                    "Add the broth one ladle at a time, stirring until each addition is absorbed, for about 18 minutes.",
+                    "Stir in the mushrooms, the remaining butter and the parmesan.",
+                    "Season and serve immediately."
+                ),
+                listOf(
+                    DietaryAttribute(
+                        id = 9383, name = "Gluten-free", contentColor = 4294831848, backgroundColor = 4287249178
+                    )
                 )
-            )
-        ),
-        onClick = {}
-    )
-}
+            ),
+            onClick = {}
+        )
+    }
 }

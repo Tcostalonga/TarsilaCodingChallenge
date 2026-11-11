@@ -95,7 +95,7 @@ private fun RecipeScreen(
         if (showFilterBottomSheet) {
             RecipeFilterBottomSheet(
                 filterDraft = filterDraft,
-                dietaryAttributes = uiState.dietaryAttributeList,
+                dietaryAttributes = uiState.dietaryAttributes,
                 searchInstructionsQuery = searchInstructionsQuery,
                 onDismissRequest = {
                     showFilterBottomSheet = false
